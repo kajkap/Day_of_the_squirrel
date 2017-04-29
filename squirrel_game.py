@@ -23,6 +23,23 @@ def create_board(columns, lines):
     return board
 
 
+def loading_level(level_nr):
+    level_file = open('level' + level_nr + '.txt')
+    level_content = level_file.readlines()
+    level_file.close()
+
+    board = []
+    for line in level_content:
+        line = line.strip('\n')
+
+        board_line = []
+        for character in line:
+            board_line.append(character)
+        board.append(board_line)
+
+    return board
+
+
 def print_board(board):
     """Function prints list representing our gameboard.
 
@@ -44,7 +61,7 @@ def insert_player(board, x_player, y_player):
         board (list): list of board rows (list) after player insertion
     """
 
-    board[y_player][x_player] = '@'
+    board[y_player][x_player] = '@' + '\033[32m'
     return board
 
 
@@ -117,7 +134,7 @@ def main():
     button_pressed = ''
     x_player = 1    # player's initial horizontal position
     y_player = 1    # player's initial vertical position
-    board = create_board(120, 40)   # creation of the gameboard
+    board = loading_level('1')   # creation of the gameboard
 
     while button_pressed != '\\':
         os.system('clear')  # clears terminal screen
