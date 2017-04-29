@@ -1,5 +1,6 @@
 import os
 import time
+import random
 
 
 def create_board(columns, lines):
@@ -113,11 +114,72 @@ def user_control(board, x_player, y_player, button_pressed):
     return x_player, y_player
 
 
+def insert_food(board, level):
+    """Function adds collected items into inventory.
+
+    Args:
+        board (list): list of board rows (list)
+        level (int): actual game level
+
+    Return:
+        board (list): list of board rows (list) after food to collect insertion
+    """
+    if level == 1:
+        food = {'🌰': 20, '🍄': 8, '🍏': 5, '🍓': 8, '💎': 10}
+    elif level == 2:
+        food = {'🌰': 20, '🍄': 6, '🍏': 10, '🍓': 6, '💎': 10}
+    elif level == 3:
+        food = {'🌰': 20, '🍄': 4, '🍏': 15, '🍓': 4, '💎': 10}
+    else:
+        food = {'🌰': 20, '🍄': 2, '🍏': 20, '🍓': 2, '💎': 10}
+
+    for key in food:
+        for i in range(food[key]):
+            lines = random.randrange(2, 38)
+            columnes = random.randrange(2, 118)
+            while board[lines][columnes] != key:
+                if board[lines][columnes] == ' ':
+                    board[lines][columnes] = key
+    return board
+
+
+def collecting_food(board, x_player, y_player, inventory, health):
+    """Function adds collected items into inventory.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        inventory (dict): collected items(keys) and their amounts (values)
+        health (int): player's health points
+
+    Return:
+        inventory (dict): collected items(keys) and their amounts (values)
+        health (int): player's health points
+    """
+    if board[y_player][x_player] == '🌰':
+        inventory['🌰'] += 1
+    elif board[y_player][x_player] == '💎':
+        inventory['💎'] += 1
+    elif board[y_player][x_player] == '🍄':
+        inventory['🌰'] += 20
+    elif board[y_player][x_player] == '🍓':
+        health += 5
+    elif board[y_player][x_player] == '🍏':
+        health -= 5
+    print(inventory, health)
+    return inventory, health
+
+
 def main():
     button_pressed = ''
     x_player = 1    # player's initial horizontal position
     y_player = 1    # player's initial vertical position
+    level = 1
+    inventory = {'🌰': 0, '💎': 0}
     board = create_board(120, 40)   # creation of the gameboard
+    board = insert_food(board, level)
+    health = 20  # player's initial health points
 
     while button_pressed != '\\':
         os.system('clear')  # clears terminal screen
@@ -127,6 +189,12 @@ def main():
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
+        inventory, health = collecting_food(board, x_player, y_player, inventory, health)
+        if inventory['🌰'] >= 20:  # next level condition
+            level += 1
+            inventory = {'🌰': 0, '💎': 0}
+            board = create_board(120, 40)
+            board = insert_food(board, level)
 
 
 if __name__ == '__main__':
