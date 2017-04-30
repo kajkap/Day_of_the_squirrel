@@ -3,25 +3,25 @@ import time
 import random
 
 
-def create_board(columns, lines):
-    """Function creates list representing our gameboard.
-
-    Args:
-        columns (int): number of gameboard columns
-        lines (int): number of gameboard rows
-
-    Return:
-        board (list): list of board rows (list)
-    """
-
-    board = []
-    full_line = ['X' for i in range(columns)]   # creates full row of the board
-    medium_line = [' ' for i in range(columns-2)]   # creates space inside medium rows
-    for i in range(lines):  # creates board as list of lists (rows)
-        board.append(full_line.copy())
-        if i > 0 and i < lines - 1:
-            board[i][1:(columns-1)] = medium_line
-    return board
+# def create_board(columns, lines):
+#     """Function creates list representing our gameboard.
+#
+#     Args:
+#         columns (int): number of gameboard columns
+#         lines (int): number of gameboard rows
+#
+#     Return:
+#         board (list): list of board rows (list)
+#     """
+#
+#     board = []
+#     full_line = ['X' for i in range(columns)]   # creates full row of the board
+#     medium_line = [' ' for i in range(columns-2)]   # creates space inside medium rows
+#     for i in range(lines):  # creates board as list of lists (rows)
+#         board.append(full_line.copy())
+#         if i > 0 and i < lines - 1:
+#             board[i][1:(columns-1)] = medium_line
+#     return board
 
 
 def loading_level(level_nr):
@@ -132,7 +132,7 @@ def user_control(board, x_player, y_player, button_pressed):
 
 
 def insert_food(board, level):
-    """Function adds collected items into inventory.
+    """Function inserts items to collect into gameboard.
 
     Args:
         board (list): list of board rows (list)
@@ -157,6 +157,9 @@ def insert_food(board, level):
             while board[lines][columnes] != key:
                 if board[lines][columnes] == ' ':
                     board[lines][columnes] = key
+                else:
+                    lines = random.randrange(2, 38)
+                    columnes = random.randrange(2, 118)
     return board
 
 
@@ -184,7 +187,6 @@ def collecting_food(board, x_player, y_player, inventory, health):
         health += 5
     elif board[y_player][x_player] == '🍏':
         health -= 5
-    print(inventory, health)
     return inventory, health
 
 
@@ -198,7 +200,6 @@ def main():
     board = loading_level(str(level))   # creation of the gameboard
     board = insert_food(board, level)
     health = 20  # player's initial health points
-
 
     while button_pressed != '\\':
         os.system('clear')  # clears terminal screen
