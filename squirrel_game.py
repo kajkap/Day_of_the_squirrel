@@ -181,13 +181,13 @@ def insert_food(board, level):
 
     for key in food:
         for i in range(food[key]):
-            ready = 0
-            while ready == 0:
+            ready = False
+            while not ready:
                 lines = random.randrange(2, 38)
                 columnes = random.randrange(2, 118)
                 if board[lines][columnes] == ' ':
                     board[lines][columnes] = key
-                    ready += 1
+                    ready = True
     return board
 
 
