@@ -193,25 +193,20 @@ def intro():
     pass
 
 
-def level1():
-    pass
-
-
 def main():
     intro()
-    level1()
     button_pressed = ''
     x_player = 1    # player's initial horizontal position
     y_player = 1    # player's initial vertical position
-    board = loading_level('1')   # creation of the gameboard
     level = 1
     inventory = {'●': 0, '♦': 0}
     # board = create_board(120, 40)   # old creation of the gameboard
     board = loading_level(str(level))   # creation of the gameboard
     board = insert_food(board, level)
     health = 20  # player's initial health point
+    game_won = False
 
-    while button_pressed != '\\':
+    while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         os.system('clear')  # clears terminal screen
         board = insert_player(board, x_player, y_player)    # inserts player character on the gameboard
         print_board(board)  # displays gameboard
@@ -220,10 +215,11 @@ def main():
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
-        if inventory['●'] >= 100:  # next level condition
+        if inventory['●'] >= 50:  # next level condition
             level += 1
             inventory = {'●': 0, '♦': 0}
-            # board = create_board(120, 40)
+            x_player = 1    # player's initial horizontal position
+            y_player = 1    # player's initial vertical position
             board = loading_level(str(level))
             board = insert_food(board, level)
 
