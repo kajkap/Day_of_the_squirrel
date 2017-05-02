@@ -193,6 +193,10 @@ def intro():
     pass
 
 
+def level1():
+    pass
+
+
 def main():
     intro()
     level1()
