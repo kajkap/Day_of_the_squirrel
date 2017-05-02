@@ -25,6 +25,15 @@ def create_board(columns, lines):
 
 
 def loading_level(level_nr):
+    """Function loades list representing our gameboard from text files.
+
+    Args:
+        level_nr (int): number of current game level
+
+    Return:
+        board (list): list of board rows (list)
+    """
+
     level_file = open('level' + level_nr + '.txt')
     level_content = level_file.readlines()
     level_file.close()
@@ -141,6 +150,7 @@ def insert_food(board, level):
     Return:
         board (list): list of board rows (list) after food to collect insertion
     """
+
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
     elif level == 2:
@@ -176,6 +186,7 @@ def collecting_food(board, x_player, y_player, inventory, health):
         inventory (dict): collected items(keys) and their amounts (values)
         health (int): player's health points
     """
+
     if board[y_player][x_player] == '●':
         inventory['●'] += 1
     elif board[y_player][x_player] == '♦':
@@ -190,38 +201,100 @@ def collecting_food(board, x_player, y_player, inventory, health):
 
 
 def intro():
+    """Function displays game intro"""
+
     pass
+
+
+def manage_display(board, x_player, y_player):
+    """Function takes care of game pseudo animation.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+    """
+
+    os.system('clear')  # clears terminal screen
+    board = insert_player(board, x_player, y_player)    # inserts player character on the gameboard
+    print_board(board)  # displays gameboard
+    board = clear_player(board, x_player, y_player)  # clears place on the gameboard occupied by user
+
+
+def checking_level_end(level, inventory, x_player, y_player):
+    """Function checks if level end conditions were met.
+
+    Args:
+        level (int): number of current game level
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        inventory (dict): collected items(keys) and their amounts (values)
+
+    Return:
+        next_level (bool): True if level end conditions were met, False otherwise
+    """
+
+    next_level = False
+    if level == 1 and inventory['●'] >= 50:
+        next_level = True
+    elif level == 2 and inventory['●'] >= 40 and x_player == 117 and y_player == 38:
+        next_level = True
+    return next_level
+
+
+def setting_next_level(level):
+    """Function sets parameters of next game level.
+
+    Args:
+        level (int): number of current game level
+
+    Return:
+        game_won (bool): True if player managed to finish the game, False otherwise
+        level (int): number of next game level
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        inventory (dict): collected items(keys) and their amounts (values)
+    """
+
+    x_player = 1    # player's initial horizontal position
+    y_player = 1    # player's initial vertical position
+    level += 1
+    inventory = {'●': 0, '♦': 0}
+
+    if level == 4:
+        game_won = True
+        board = []
+    else:
+        board = loading_level(str(level))
+        board = insert_food(board, level)
+        game_won = False
+    return game_won, level, inventory, board, x_player, y_player
 
 
 def main():
     intro()
+    level = 0
+    # sets parameters of next game level
+    game_won, level, inventory, board, x_player, y_player = setting_next_level(level)
+
     button_pressed = ''
-    x_player = 1    # player's initial horizontal position
-    y_player = 1    # player's initial vertical position
-    level = 1
-    inventory = {'●': 0, '♦': 0}
-    # board = create_board(120, 40)   # old creation of the gameboard
-    board = loading_level(str(level))   # creation of the gameboard
-    board = insert_food(board, level)
     health = 20  # player's initial health point
     game_won = False
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
-        os.system('clear')  # clears terminal screen
-        board = insert_player(board, x_player, y_player)    # inserts player character on the gameboard
-        print_board(board)  # displays gameboard
-        board = clear_player(board, x_player, y_player)  # clears place on the gameboard occupied by user
+        manage_display(board, x_player, y_player)   # creates current frame of game animation
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
+        # changes user inventory and health if user collected special items
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
-        if inventory['●'] >= 50:  # next level condition
-            level += 1
-            inventory = {'●': 0, '♦': 0}
-            x_player = 1    # player's initial horizontal position
-            y_player = 1    # player's initial vertical position
-            board = loading_level(str(level))
-            board = insert_food(board, level)
+
+        # checks if level end conditions were met
+        next_level = checking_level_end(level, inventory, x_player, y_player)
+        if next_level:
+            # sets parameters of next game level
+            game_won, level, inventory, board, x_player, y_player = setting_next_level(level)
 
 
 if __name__ == '__main__':
