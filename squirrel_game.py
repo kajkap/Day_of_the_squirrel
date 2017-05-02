@@ -33,35 +33,6 @@ def loading_level(level_nr):
     for line in level_content:
         line = line.strip('\n')
 
-
-def create_board(columns, lines):
-    """Function creates list representing our gameboard.
-
-    Args:
-        columns (int): number of gameboard columns
-        lines (int): number of gameboard rows
-
-    Return:
-        board (list): list of board rows (list)
-        """
-
-    board_line = []
-    for character in line:
-        board_line.append(character)
-    board.append(board_line)
-
-    return board
-
-
-def loading_level(level_nr):
-    level_file = open('level' + level_nr + '.txt')
-    level_content = level_file.readlines()
-    level_file.close()
-
-    board = []
-    for line in level_content:
-        line = line.strip('\n')
-
         board_line = []
         for character in line:
             board_line.append(character)
@@ -218,7 +189,13 @@ def collecting_food(board, x_player, y_player, inventory, health):
     return inventory, health
 
 
+def intro():
+    pass
+
+
 def main():
+    intro()
+    level1()
     button_pressed = ''
     x_player = 1    # player's initial horizontal position
     y_player = 1    # player's initial vertical position
