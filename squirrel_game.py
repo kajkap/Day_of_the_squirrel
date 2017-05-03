@@ -168,7 +168,8 @@ def insert_food(board, level):
     Return:
         board (list): list of board rows (list) after food to collect insertion
     """
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m'}
     reset_color = '\033[0m'
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
@@ -189,6 +190,42 @@ def insert_food(board, level):
                     board[lines][columnes] = item_colors[key] + key + reset_color
                     ready = True
     return board
+
+
+def insert_minions(board, level):
+    """Function inserts evil minions into gameboard.
+
+    Args:
+        board (list): list of board rows (list)
+        level (int): actual game level
+
+    Return:
+        board (list): list of board rows (list) after evil minions insertion
+    """
+
+    item_colors = {'ᴥ': '\033[31m'}
+    reset_color = '\033[0m'
+    if level == 1:
+        minions = {'ᴥ': 5}
+    elif level == 2:
+        minions = {}
+    elif level == 3:
+        minions = {'ᴥ': 5}
+    else:
+        minions = {}
+
+    minions_location = []
+    for key in minions:
+        for i in range(minions[key]):
+            ready = False
+            while not ready:
+                lines = random.randrange(2, 38)
+                columnes = random.randrange(2, 118)
+                if board[lines][columnes] == ' ':
+                    board[lines][columnes] = item_colors[key] + key + reset_color
+                    ready = True
+                minions_location.append([columnes, lines])
+    return board, minions_location
 
 
 def collecting_food(board, x_player, y_player, inventory, health):
@@ -217,6 +254,15 @@ def collecting_food(board, x_player, y_player, inventory, health):
     elif board[y_player][x_player] == '✿':
         health -= 5
     return inventory, health
+
+
+def minion_encounter(x_player, y_player, minions_location, health):
+    for enemy_location in minions_location:
+        if x_player == enemy_location[0] and y_player == enemy_location[1]:
+            health -= 10
+            x_player = 1
+            y_player = 1
+    return x_player, y_player, health
 
 
 def intro():
@@ -287,48 +333,39 @@ def setting_next_level(level):
     else:
         board = loading_level(str(level))
         board = insert_food(board, level)
+        board, minions_location = insert_minions(board, level)
         game_won = False
-    return game_won, level, inventory, board, x_player, y_player
+    return game_won, level, inventory, board, x_player, y_player, minions_location
 
 
-def print_end_image(end):
+def print_end_image(game_won):
     """Function displays final images from text file.
 
     Args:
-        end (str): shows whether a player has won or lost
+        game_won (bool): shows whether a player has won or not
     """
 
     with open('end_images.txt', 'r') as img_file:
         images = img_file.read().split('***')
-        if end == 'game_over':
+        if not game_won:
             for i in range(5):
-                os.system('clear')
-                print(images[0])
-                time.sleep(0.2)
-                os.system('clear')
-                print(images[1])
-                time.sleep(0.1)
-                os.system('clear')
-                print(images[2])
-                time.sleep(0.2)
-        elif end == 'win':
+                for image_nr in range(3):
+                    os.system('clear')
+                    print(images[image_nr])
+                    time.sleep(0.2)
+        else:
             for i in range(5):
-                os.system('clear')
-                print(images[3])
-                time.sleep(0.2)
-                os.system('clear')
-                print(images[4])
-                time.sleep(0.1)
-                os.system('clear')
-                print(images[5])
-                time.sleep(0.2)
+                for image_nr in range(3, 6):
+                    os.system('clear')
+                    print(images[image_nr])
+                    time.sleep(0.2)
 
 
 def main():
     intro()
     level = 0
     # sets parameters of next game level
-    game_won, level, inventory, board, x_player, y_player = setting_next_level(level)
+    game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     button_pressed = ''
     health = 20  # player's initial health point
@@ -341,12 +378,15 @@ def main():
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
         # changes user inventory and health if user collected special items
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
+        x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
 
         # checks if level end conditions were met
         next_level = checking_level_end(level, inventory, x_player, y_player)
         if next_level:
             # sets parameters of next game level
-            game_won, level, inventory, board, x_player, y_player = setting_next_level(level)
+            game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
+
+    print_end_image(game_won)
 
 
 if __name__ == '__main__':
