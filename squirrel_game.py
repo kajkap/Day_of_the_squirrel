@@ -201,6 +201,7 @@ def insert_minions(board, level):
 
     Return:
         board (list): list of board rows (list) after evil minions insertion
+        minions_location (list): list containing positions of enemies on the board
     """
 
     item_colors = {'ᴥ': '\033[31m'}
@@ -257,12 +258,50 @@ def collecting_food(board, x_player, y_player, inventory, health):
 
 
 def minion_encounter(x_player, y_player, minions_location, health):
+    """Function checks if player encounters an enemy and changes his position on board and health if it has happened.
+
+    Args:
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        minions_location (list): list containing positions of enemies on the board
+        health (int): player's health points
+
+    Return:
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        health (int): player's health points
+    """
+
     for enemy_location in minions_location:
         if x_player == enemy_location[0] and y_player == enemy_location[1]:
             health -= 10
             x_player = 1
             y_player = 1
     return x_player, y_player, health
+
+
+def move_minions(board, minions_location):
+    acceptable_place = [' ', '\033[95m' + '🐿️' + '\033[0m']  # content of place where minion can move
+    for enemy_location_nr in range(len(minions_location)):     # loop through all minions location
+        x_minion = minions_location[enemy_location_nr][0]
+        y_minion = minions_location[enemy_location_nr][1]
+        possible_moves = []     # list of adjacent places on board where minion can move
+        if board[y_minion][x_minion - 1] in acceptable_place:
+            possible_moves.append([x_minion - 1, y_minion])
+        if board[y_minion][x_minion + 1] in acceptable_place:
+            possible_moves.append([x_minion + 1, y_minion])
+        if board[y_minion - 1][x_minion] in acceptable_place:
+            possible_moves.append([x_minion, y_minion - 1])
+        if board[y_minion + 1][x_minion] in acceptable_place:
+            possible_moves.append([x_minion, y_minion + 1])
+
+        if len(possible_moves) > 0:
+            chosen_move = random.choice(possible_moves)
+            board[chosen_move[1]][chosen_move[0]] = board[y_minion][x_minion]
+            board[y_minion][x_minion] = ' '
+            minions_location[enemy_location_nr] = chosen_move.copy()
+
+    return board, minions_location
 
 
 def intro():
@@ -373,11 +412,13 @@ def main():
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         manage_display(board, x_player, y_player)   # creates current frame of game animation
+        board, minions_location = move_minions(board, minions_location)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
         # changes user inventory and health if user collected special items
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
+        # checks if user encounters an enemy and chenges user properties if it has happened
         x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
 
         # checks if level end conditions were met
