@@ -1,6 +1,8 @@
 import os
 import time
 import random
+
+"""
 black = '\033[30m'
 red = '\033[31m'
 green = '\033[32m'
@@ -16,6 +18,7 @@ yellow = '\033[93m'
 lightblue = '\033[94m'
 pink = '\033[95m'
 lightcyan = '\033[96m'
+"""
 
 
 def create_board(columns, lines):
@@ -86,7 +89,7 @@ def insert_player(board, x_player, y_player):
         board (list): list of board rows (list) after player insertion
     """
 
-    board[y_player][x_player] = '\033[32m' + '🐿️' + '\033[0m'
+    board[y_player][x_player] = '\033[95m' + '🐿️' + '\033[0m'
     return board
 
 
@@ -165,7 +168,8 @@ def insert_food(board, level):
     Return:
         board (list): list of board rows (list) after food to collect insertion
     """
-
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+    reset_color = '\033[0m'
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
     elif level == 2:
@@ -182,7 +186,7 @@ def insert_food(board, level):
                 lines = random.randrange(2, 38)
                 columnes = random.randrange(2, 118)
                 if board[lines][columnes] == ' ':
-                    board[lines][columnes] = key
+                    board[lines][columnes] = item_colors[key] + key + reset_color
                     ready = True
     return board
 
@@ -293,6 +297,7 @@ def print_end_image(end):
     Args:
         end (str): shows whether a player has won or lost
     """
+
     with open('end_images.txt', 'r') as img_file:
         images = img_file.read().split('***')
         if end == 'game_over':
