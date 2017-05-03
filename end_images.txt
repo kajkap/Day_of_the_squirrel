@@ -1,0 +1,245 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                     `..--..``                         ``..--..`                                      X
+X                                  .:/++/////////:-`                 `-://///////++/:.                                 X
+X                              `:+//::::::::::::://:.             .///::::::::::::://+:`.                              X
+X                             `:+/:::::::::::////:::://`         .//:::////::::::::::::/+:`                            X
+X                            `//:::::::::::://///+/:-::/-       -/:::/++////::::::::::::://`                           X
+X                           `+/:::::::::::::////++++:::/+.     -+/::/++++////:::::::::::::/+`                          X
+X                           :+::-------:::::///++oooo//+++//+//+++//ooo+++///::::--------::+:                          X
+X                         `+/:----------::://++ooo+++/////////////+++ooo++//:::----------:/+`                          X
+X                         `o::----------:://+o+++//////::::::::///////++oo+/::-----------:/+`                          X
+X                         `+/:----------:://++////::::::::::::::::://///++o+/::----------:/+                           X
+X                          -+:---------::/::////::::::::::::::::::::::////++o/:----------:+-                           X
+X                           `//:-------://:--///::::::::::::::::::::::::////++o+::-------://                           X
+X                            `:+::----://:--.-:::::::::::::::::::::::::::////++o+::----::+:`                           X
+X                              -///::://:--....:::::::::::::::::::::::::::////++o+/:::///-                             X
+X                               `-//+//:--....`..-:::::::::::::::::::::::://///++o+/+//.`                              X
+X                                   .:/:--.....`````.---::::::::::::::::::://////++oo:`                                X
+X                                 `-//:--......`````````..--:::::::::::::://///////++o+-`                              X
+X                               `://:---.........```````````..-:::::::::////////////+++oo:`                            X
+X                             .+/::---..........---.`````````.-::::::/++/////////////++oo+.                            X
+X                           -+/:----.........-sdhdy-````````.-:::::+dddms////////////+++oo.                            X
+X                          .o/::----.........yNy:sNh....```..:::::+mm+/dNs////////////+++o+`                           X
+X                          /+/:-----.........mmdhhmm-.......-:::::sNmhhdmd////////////++++o-                           X
+X                         `o+::-------.......hmdddmd........-:::::+mmdddmy/////////////+//+/                           X
+X                         `o+:::---------....:dNNNd/`........-:::::smNNNd///////////////:/++                           X
+X                         ++/::-----------...-/+/-.......``..-:::::+sso/////::------::::/o:                            X
+X                         .o+/::-----------.............````..-::///////::-----------::/+o`                            X
+X                          :o+/:::--------------.......``````...-:::::-------------:::/+o-                             X
+X                           :o+//:::::::::::::::::---...````...---:::::::::::::::::://oo.                              X
+X                            .+o++/////////////::::---:::::::/:---:::::////////////++o/`                               X
+X                              `:+oo+++///////:::::---:o++++++++----:::::///////+++oo/-`                               X
+X                            ```..-:oooo++++///////::::/ooooooo/:::///////++++oooo+-...```                             X
+X                            `..``--` `.:://+/////+++////+ooo+///+++/////++//:-.` `--.`..`                             X
+X                           `` `.`                 `.-/+o++++oo+/-`                  `.` ``                            X
+X                           `.`                        `.---.`                        `.`                              X
+X                           `                                                           `                              X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                      .mo`N/                             /N`om`                                       X
+X                                     `mo :M`                             `M: od`                                      X
+X                                     hy  sN                               Ns  yh.                                     X
+X                                    /N`  hN                               Nh  `N/                                     X
+X                                    mo   hM`           `.....`           `Mh   om                                     X
+X                                   -M.   +N/      -+yhhysooosyhhy+-      /N+   .M-                                    X
+X                                   +N    .sd`  -sds:`           `:sds-  `ds.    N+                                    X
+X                               -   +N     `yh/hh//y               y//hh/hy`     N+   -                                X
+X                               d`  :M`      :hdymo-               -omydh:      `M:  `d                                X
+X                               dh` `N+         `sy                 ys`         +N` `hd                                X
+X                               y+h` +m`    -.  .N-                 -N.  --    `m+ `h+y                                X
+X                               +h-y/ sm-.   `-/No                   oN/-`   .-ms /y-h+                                X
+X                               .d/./y.:hdyo+osm+                     +mso+oydh:.y/.+d.                                X
+X                                y:/+`osyd/+o+:..                     ..:+o+/dyso`+/:y                                 X
+X                                -h::o:.M:  `:.                         .:`  :M.:o::h-                                 X
+X                                 h- +-oNy` `+                          `+` `yNo-+ -h                                  X
+X                                 -h``. `hy `                             ` yh` .``h-                                  X
+X                                  :ho.  od`-/+-`                     `-+/-`do  .oh:                                   X
+X                                     /y:`m:   `ydoo+              +oody`   :m`:y/                                     X
+X                                       /hd     `-o/:odh         hdo:/o-`     dh/                                      X
+X                                        od        ./:---/:   :/.--:/.        do                                       X
+X                                        `yd-           `/     /`           -dy`                                       X
+X                                          :mo`:sys`     +:   :+     `sys:`om:                                         X
+X                                           .Ny `:/d:    y`   `y    :d/:` yN.                                          X
+X                                            +m-  `:yo. -y`   `y- `oy:`  -m+                                           X
+X                                            `N.    o-/o/+d. .d+/o/-o    .N`                                           X
+X                                             :hy:  `d/.-./h.h/.-.:d`  :yh:                                            X
+X                                             .sd: /o://o/d/o//:o/ :ds.                                                X
+X                                                -m+.o+` `-:-` `+o.+m-                                                 X
+X                                                 :N:/:s+o/:/o+s:/:N:                                                  X
+X                                                  +mo-..-.`.-..-om+                                                   X
+X                                                   `sd.  `..  .ds`                                                    X
+X                                                     /N-     -N/                                                      X
+X                                                      :yhyyyhy:                                                       X
+X                                                                                                                      X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X   .oooooo.          .o.       ooo        ooooo ooooooooooo       .oooooo.   oooooo     oooo ooooooooooo ooooooooo.   X
+X  d8P'  `Y8b        .888.      `88.       .888' `888'     8      d8P'  `Y8b   `888.     .8'  `888'     8 `888   `Y88. X
+X 888               .8"888.      888b     d'888   888            888      888   `888.   .8'    888         888   .d88' X
+X 888              .8' `888.     8 Y88. .P  888   888ooo8        888      888    `888. .8'     888ooo8     888ooo88P'  X
+X 888     ooooo   .88ooo8888.    8  `888'   888   888   "        888      888     `888.8'      888   "     888`88b.    X
+X `88.    .88'   .8'     `888.   8    Y     888   888      o     `88b    d88'      `888'       888      o  888  `88b.  X
+X  `Y8bood8P'   o88o     o8888o o8o        o888o o888oooood8      `Y8bood8P'        `8'       o888oooood8 o888o  o888o X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                  ././                                        -. .                                    X
+X                               .yodhy                                       `dsyy-                                    X
+X                                 -ydds                                        ddddy                                   X
+X                                  `+s:                                       .ydho`                                   X
+X                                   /++-                                     -/++`                                     X
+X                                   /+++:`                                 `:++++                                      X
+X                                   ++/++/`                               `/+++/+                                      X
+X                                   ++:/++/.                             `/+++:/+                                      X
+X                                   /+-:+++/.        `.........``       ./+++/-/+                                      X
+X                                   /+:-:+++/. `.-:////++++++++///::.` ./+++/--+/                                      X
+X                                   :+/--/+++/://++++++++++++++++++++///+++/--:+:                                      X
+X                                   -+/--:+++++++++++++++++++++++++++++++++:--/+-                                      X
+X                                   `++::/+++++++++++++++++++++++++++++++++/:-/+`                                      X
+X                                    :+/+++++++++++++++++++++++++++++++++++++/+/                                       X
+X                                    -+++++++++++++++++++++++++++++++++++++++++:                                       X
+X                                   -/+++++oo+/++++++++++++++++++++++++ss+++++++:                                      X
+X                                  -++++/::+/:::/++o++++o++++o++o+++:/:/+/:/+++++:                                     X
+X                                 :+++/:---:::---:/o+o+++++++o++o///-/:::---:/++++-                                    X
+X                                :+++/----:::::---:++o+++++++++++--:-::------:/++++-                                   X
+X                               -+++/-------.------:++++++++++++:------.------:/+++/.                                  X
+X                              .+++/----.` ``` `.---:++++++++++/----````` `.---:++++/`                                 X
+X                             ./+++:---`   oys:  .---++++++++++/---   +ys/  `---:++++/`                                X
+X                            `/+++/----   +yddd. `---/+++++++++/--`  /yddd-  .---+++++:                                X
+X                            /+++/:----`  +yyy+` `---/+++////++/--.  /yyy+`  ----/+++++-                               X
+X                           -/:::-------.`  `  `.----:/://+++/:/---.`` `   `-----://////.                              X
+X                          .------::::::----.-----------ohddds---------..---::::::-------`                             X
+X                         `------:ossssso+---------------/os+:------------:+ossssso-------`                            X
+X                         .------:osssssss:--------:o+``.....```o/--------/ssssssso--------                            X
+X                          `.------/++++/:---------+dy`        `yy---------:/++++/------.`                             X
+X                            ``.-------------------:y+` `    `  .+-------------------..`                               X
+X                               ``.-------------------`        `------------------.``                                  X
+X                                   ``.-----------------.....-----------------.``                                      X
+X                                        `..-----------------------------..`                                           X
+X                                              ```......-----......```                                                 X
+X                                                                                                                      X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                    `-:://////:-.                       `-:://///::-`                                 X
+X                                .:+/:..``````.-/+/-`                -/+/-..`````.-:++:.                               X
+X                               .++-`              .:o/`           `:o/.              `-++.                            X
+X                            `+o.                    -o/`        :o:`                   .o+`.                          X
+X                            `s:                        :s.     `o/`                       :s`                         X
+X                           y-                          .s:   .y-                          -y`                         X
+X                          ++                            `s: -y.                            +o                         X
+X                         `d                              `y:y`                              d`                        X
+X                         :s                               .d-                               o:                        X
+X                         +/                                                                 /o                        X
+X                         +/                                                                 /o                        X
+X                         :o                                                                 o/                        X
+X                         `d                                                                 d`                        X
+X                          y-                                                               -y                         X
+X                          .h                                                               h.                         X
+X                           o+                                                             /o                          X
+X                            y-                                                           -h.                          X
+X                            `h.                                                         .h`                           X
+X                             `y.                                                       .y.                            X
+X                              `y-                                                     -y`                             X
+X                               `s/                                                   /s`                              X
+X                                 /o`                                               `o+                                X
+X                                  -s-                                             -s-                                 X
+X                                   `+o`                                         `++`                                  X
+X                                     -o/                                       :s-                                    X
+X                                      `/o-                                   -o/`                                     X
+X                                        `+o.                               .o+`                                       X
+X                                          .++.                           .++.                                         X
+X                                            .++.                       .++.                                           X
+X                                              .++-                   -++.                                             X
+X                                                 `/o:`             `:o/`                                              X
+X                                                   `:o/.         ./o:`                                                X
+X                                                      -++-`   `-++-                                                   X
+X                                                        `/o/./o/`                                                     X
+X                                                           ./.                                                        X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X	        oooooo   oooo   .oooooo.   ooooo     ooo      oooooo   oooooo     oooo ooooo ooooo      ooo            X
+X    	         `888.   .8'   d8P'  `Y8b  `888'     `8'       `888.    `888.     .8'  `888' `888b.     `8'            X
+X	          `888. .8'   888      888  888       8         `888.   .8888.   .8'    888   8 `88b.    8             X
+X	           `888.8'    888      888  888       8          `888  .8'`888. .8'     888   8   `88b.  8             X
+X	            `888'     888      888  888       8           `888.8'  `888.8'      888   8     `88b.8             X
+X	             888      `88b    d88'  `88.    .8'            `888'    `888'       888   8       `888             X
+X	            o888o      `Y8bood8P'     `YbodP'               `8'      `8'       o888o o8o        `8             X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+X                                                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

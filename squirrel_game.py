@@ -287,6 +287,38 @@ def setting_next_level(level):
     return game_won, level, inventory, board, x_player, y_player
 
 
+def print_end_image(end):
+    """Function displays final images from text file.
+
+    Args:
+        end (str): shows whether a player has won or lost
+    """
+    with open('end_images.txt', 'r') as img_file:
+        images = img_file.read().split('***')
+        if end == 'game_over':
+            for i in range(5):
+                os.system('clear')
+                print(images[0])
+                time.sleep(0.2)
+                os.system('clear')
+                print(images[1])
+                time.sleep(0.1)
+                os.system('clear')
+                print(images[2])
+                time.sleep(0.2)
+        elif end == 'win':
+            for i in range(5):
+                os.system('clear')
+                print(images[3])
+                time.sleep(0.2)
+                os.system('clear')
+                print(images[4])
+                time.sleep(0.1)
+                os.system('clear')
+                print(images[5])
+                time.sleep(0.2)
+
+
 def main():
     intro()
     level = 0
