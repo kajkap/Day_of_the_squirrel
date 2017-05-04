@@ -117,11 +117,16 @@ def getch():
     """
 
     import sys, tty, termios
+    from select import select
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
     try:
         tty.setraw(sys.stdin.fileno())
-        ch = sys.stdin.read(1)
+        [i, o, e] = select([sys.stdin.fileno()], [], [], 0.35)
+        if i:
+            ch = sys.stdin.read(1)
+        else:
+            ch = ''
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return ch
@@ -304,12 +309,6 @@ def move_minions(board, minions_location):
     return board, minions_location
 
 
-def intro():
-    """Function displays game intro"""
-
-    pass
-
-
 def manage_display(board, x_player, y_player):
     """Function takes care of game pseudo animation.
 
@@ -375,6 +374,41 @@ def setting_next_level(level):
         board, minions_location = insert_minions(board, level)
         game_won = False
     return game_won, level, inventory, board, x_player, y_player, minions_location
+
+
+def intro():
+    """Function displays game intro"""
+
+    color = ['\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m']
+    reset_color = '\033[0m'
+
+    img_file = open('end_images.txt')
+    images = img_file.read().split('***\n')
+    img_file.close()
+
+    for image_nr in range(len(images)):
+        image = images[image_nr]
+        image = image.splitlines()
+
+        for i in range(len(image)):
+            image[i] = random.choice(color) + image[i] + reset_color
+
+        for i in range(2, len(image)):
+            os.system('clear')
+            for j in range(i+1):
+                print(image[j])
+            time.sleep(0.05)
+
+        input('Press ENTER to continue')
+
+        for i in range(len(image)):
+            os.system('clear')
+            image[i] = ' '
+            for j in range(len(image)):
+                print(image[j])
+            time.sleep(0.05)
+
+        input('Press ENTER to continue')
 
 
 def print_end_image(game_won):
