@@ -225,7 +225,7 @@ def insert_minions(board, level):
                 if board[lines][columnes] == ' ':
                     board[lines][columnes] = item_colors[key] + key + reset_color
                     ready = True
-                minions_location.append([columnes, lines])
+                    minions_location.append([columnes, lines])
     return board, minions_location
 
 
@@ -385,7 +385,7 @@ def print_end_image(game_won):
     """
 
     with open('end_images.txt', 'r') as img_file:
-        images = img_file.read().split('***')
+        images = img_file.read().split('***\n')
         if not game_won:
             for i in range(5):
                 for image_nr in range(3):
