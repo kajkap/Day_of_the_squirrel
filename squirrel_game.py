@@ -385,7 +385,7 @@ def print_end_image(game_won):
     """
 
     with open('end_images.txt', 'r') as img_file:
-        images = img_file.read().split('***')
+        images = img_file.read().split('***\n')
         if not game_won:
             for i in range(5):
                 for image_nr in range(3):
@@ -412,7 +412,7 @@ def main():
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         manage_display(board, x_player, y_player)   # creates current frame of game animation
-        board, minions_location = move_minions(board, minions_location)
+        sboard, minions_location = move_minions(board, minions_location)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
