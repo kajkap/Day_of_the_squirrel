@@ -234,6 +234,75 @@ def insert_minions(board, level):
     return board, minions_location
 
 
+def insert_friends_and_hamster(board, level):
+    """Function inserts evil hamster and squirrel's friends into gameboard.
+
+    Args:
+        board (list): list of board rows (list)
+        level (int): actual game level
+
+    Return:
+        board (list): list of board rows (list) after friends and hamster insertion
+    """
+
+    friends = ['🦆', '🦊', '🐰', '🐥', '🐻']
+    if level == 4:
+        board[24][113] = '🐹'
+        lines = 37
+        columnes = 35
+        for friend in friends:
+            board[lines][columnes] = friend
+            columnes += 17
+    return board
+
+
+def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
+    """Function removes collected items from inventory and lowers the enemy's energy
+        if the user has enough items in inventory and if he is on one of his friend's position.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        inventory (dict): collected items(keys) and their amounts (values)
+        hamster_energy (int): enemy's health points
+
+    Return:
+        inventory (dict): collected items(keys) and their amounts (values)
+        hamster_energy (int): enemy's health points
+    """
+
+    if inventory['●'] >= 20 and board[y_player][x_player] in ['🦆', '🦊', '🐰', '🐥', '🐻']:
+        inventory['●'] -= 20
+        hamster_energy -= 100
+    return inventory, hamster_energy
+
+
+def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy):
+    """Function removes the enemy's protection and
+        defeats the enemy if the user is on enemy's position.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        level (int): actual game level
+        hamster_energy (int): enemy's health points
+
+    Return:
+        board (list): list of board rows (list)
+        hamster_energy (int): enemy's health points
+    """
+
+    if hamster_energy == 100:
+        for board[lines][columnes] in board:
+            if board[lines][columnes] == '§':
+                board[lines][columnes] = ' '
+    if board[y_player][x_player] == '🐹':
+        hamster_energy = 0
+    return board, hamster_energy
+
+
 def collecting_food(board, x_player, y_player, inventory, health):
     """Function adds collected items into inventory.
 
@@ -251,14 +320,18 @@ def collecting_food(board, x_player, y_player, inventory, health):
 
     if board[y_player][x_player] == '●':
         inventory['●'] += 1
+        print("orzeszek")
     elif board[y_player][x_player] == '♦':
         inventory['♦'] += 1
+        print("diamencik")
     elif board[y_player][x_player] == '⚛':
         inventory['●'] += 20
     elif board[y_player][x_player] == '✡':
         health += 5
     elif board[y_player][x_player] == '✿':
         health -= 5
+    print(inventory)
+
     return inventory, health
 
 
@@ -342,6 +415,10 @@ def checking_level_end(level, inventory, x_player, y_player):
         next_level = True
     elif level == 2 and inventory['●'] >= 40 and x_player == 117 and y_player == 38:
         next_level = True
+    elif level == 3 and inventory['●'] >= 60:
+        next_level = True
+    elif level == 4 and hamster_energy == 0:
+        next_level = True
     return next_level
 
 
@@ -365,14 +442,16 @@ def setting_next_level(level):
     level += 1
     inventory = {'●': 0, '♦': 0}
 
-    if level == 4:
+    if level == 5:
         game_won = True
         board = []
     else:
         board = loading_level(str(level))
         board = insert_food(board, level)
         board, minions_location = insert_minions(board, level)
+        board = insert_friends_and_hamster(board, level)
         game_won = False
+
     return game_won, level, inventory, board, x_player, y_player, minions_location
 
 
@@ -435,25 +514,30 @@ def print_end_image(game_won):
 
 
 def main():
-    intro()
+    # intro()
     level = 0
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     button_pressed = ''
     health = 20  # player's initial health point
+    hamster_energy = 600
     game_won = False
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         manage_display(board, x_player, y_player)   # creates current frame of game animation
-        sboard, minions_location = move_minions(board, minions_location)
+        board, minions_location = move_minions(board, minions_location)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
         # changes user inventory and health if user collected special items
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
+        # changes evil hamster's energy if user fed his friends with collected items
+        inventory, hamster_energy = feeding_friends(board, x_player, y_player, inventory, hamster_energy)
         # checks if user encounters an enemy and chenges user properties if it has happened
         x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
+        # checks enemy's energy, removes his protection and defeats him if the user is on his position
+        board, hamster_energy = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy)
 
         # checks if level end conditions were met
         next_level = checking_level_end(level, inventory, x_player, y_player)
