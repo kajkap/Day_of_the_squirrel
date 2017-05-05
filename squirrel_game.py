@@ -51,6 +51,8 @@ def loading_level(level_nr):
     Return:
         board (list): list of board rows (list)
     """
+    red = '\033[31m'
+    reset_color = '\033[0m'
 
     level_file = open('level' + level_nr + '.txt')
     level_content = level_file.readlines()
@@ -63,6 +65,8 @@ def loading_level(level_nr):
         board_line = []
         for character in line:
             board_line.append(character)
+        # changes color of obstacles ('#') on the level map
+        board_line = [char.replace('#', red + '#' + reset_color) for char in board_line]
         board.append(board_line)
 
     return board
@@ -146,21 +150,53 @@ def user_control(board, x_player, y_player, button_pressed):
         x_player (int): horizontal position of player on the board
         y_player (int): vertical position of player on the board
     """
-
+    red = '\033[31m'
+    reset_color = '\033[0m'
     place_on_right_side = board[y_player][x_player + 1]
     place_on_left_side = board[y_player][x_player - 1]
     place_on_up_side = board[y_player - 1][x_player]
     place_on_down_side = board[y_player + 1][x_player]
 
-    if button_pressed == 'd' and place_on_right_side != 'X':
+    if button_pressed == 'd' and place_on_right_side not in ['X', red + '#' + reset_color]:
         x_player += 1
-    elif button_pressed == 'a' and place_on_left_side != 'X':
+    elif button_pressed == 'a' and place_on_left_side not in ['X', red + '#' + reset_color]:
         x_player -= 1
-    elif button_pressed == 'w' and place_on_up_side != 'X':
+    elif button_pressed == 'w' and place_on_up_side not in ['X', red + '#' + reset_color]:
         y_player -= 1
-    elif button_pressed == 's' and place_on_down_side != 'X':
+    elif button_pressed == 's' and place_on_down_side not in ['X', red + '#' + reset_color]:
         y_player += 1
     return x_player, y_player
+
+
+def check_obstacle_contact(board, x_player, y_player, button_pressed, health):
+    """Function checks user contact with dangerous obstacle and lowers user health points if it occurs.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        button_pressed (str): button pressed by user
+        health (int): player's health points
+
+    Return:
+        health (int): player's health points
+    """
+    red = '\033[31m'
+    reset_color = '\033[0m'
+    place_on_right_side = board[y_player][x_player + 1]
+    place_on_left_side = board[y_player][x_player - 1]
+    place_on_up_side = board[y_player - 1][x_player]
+    place_on_down_side = board[y_player + 1][x_player]
+
+    if button_pressed == 'd' and place_on_right_side == red + '#' + reset_color:
+        health -= 5
+    elif button_pressed == 'a' and place_on_left_side == red + '#' + reset_color:
+        health -= 5
+    elif button_pressed == 'w' and place_on_up_side == red + '#' + reset_color:
+        health -= 5
+    elif button_pressed == 's' and place_on_down_side == red + '#' + reset_color:
+        health -= 5
+    return health
 
 
 def insert_food(board, level):
@@ -435,7 +471,7 @@ def print_end_image(game_won):
 
 
 def main():
-    intro()
+    #  intro()
     level = 0
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
@@ -450,6 +486,8 @@ def main():
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
+        # checks if user encounters an obstacle and lowers user health
+        health = check_obstacle_contact(board, x_player, y_player, button_pressed, health)
         # changes user inventory and health if user collected special items
         inventory, health = collecting_food(board, x_player, y_player, inventory, health)
         # checks if user encounters an enemy and chenges user properties if it has happened
