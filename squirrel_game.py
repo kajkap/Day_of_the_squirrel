@@ -51,6 +51,7 @@ def loading_level(level_nr):
     Return:
         board (list): list of board rows (list)
     """
+
     red = '\033[31m'
     reset_color = '\033[0m'
 
@@ -83,17 +84,18 @@ def print_board(board):
         print(''.join(row))
 
 
-def insert_player(board, x_player, y_player):
+def insert_player(board, x_player, y_player, character_color):
     """Function inserts player character into the list representing our gameboard.
 
     Args:
         board (list): list of board rows (list)
+        character_color (str): escape code for chosen character color
 
     Return:
         board (list): list of board rows (list) after player insertion
     """
 
-    board[y_player][x_player] = '\033[95m' + '🐿️' + '\033[0m'
+    board[y_player][x_player] = character_color + '🐿️' + '\033[0m'
     return board
 
 
@@ -150,6 +152,7 @@ def user_control(board, x_player, y_player, button_pressed):
         x_player (int): horizontal position of player on the board
         y_player (int): vertical position of player on the board
     """
+
     red = '\033[31m'
     reset_color = '\033[0m'
     place_on_right_side = board[y_player][x_player + 1]
@@ -181,6 +184,7 @@ def check_obstacle_contact(board, x_player, y_player, button_pressed, health):
     Return:
         health (int): player's health points
     """
+
     red = '\033[31m'
     reset_color = '\033[0m'
     place_on_right_side = board[y_player][x_player + 1]
@@ -250,7 +254,7 @@ def insert_minions(board, level):
     if level == 1:
         minions = {'ᴥ': 5}
     elif level == 2:
-        minions = {}
+        minions = {'ᴥ': 5}
     elif level == 3:
         minions = {'ᴥ': 5}
     else:
@@ -357,6 +361,7 @@ def collecting_food(board, x_player, y_player, inventory, health):
         inventory (dict): collected items(keys) and their amounts (values)
         health (int): player's health points
     """
+
     item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
     reset_color = '\033[0m'
     if board[y_player][x_player] == item_colors['●'] + '●' + reset_color:
@@ -397,8 +402,20 @@ def minion_encounter(x_player, y_player, minions_location, health):
     return x_player, y_player, health
 
 
-def move_minions(board, minions_location):
-    acceptable_place = [' ', '\033[95m' + '🐿️' + '\033[0m']  # content of place where minion can move
+def move_minions(board, minions_location, character_color):
+    """Function randomly moves evil minions on the board.
+
+    Args:
+        board (list): list of board rows (list)
+        minions_location (list): list containing positions of enemies on the board
+        character_color (str): escape code for chosen character color
+
+    Return:
+        board (list): list of board rows (list)
+        minions_location (list): list containing positions of enemies on the board
+    """
+
+    acceptable_place = [' ', character_color + '🐿️' + '\033[0m']  # content of place where minion can move
     for enemy_location_nr in range(len(minions_location)):     # loop through all minions location
         x_minion = minions_location[enemy_location_nr][0]
         y_minion = minions_location[enemy_location_nr][1]
@@ -421,17 +438,18 @@ def move_minions(board, minions_location):
     return board, minions_location
 
 
-def manage_display(board, x_player, y_player):
+def manage_display(board, x_player, y_player, character_color):
     """Function takes care of game pseudo animation.
 
     Args:
         board (list): list of board rows (list)
         x_player (int): horizontal position of player on the board
         y_player (int): vertical position of player on the board
+        character_color (str): escape code for chosen character color
     """
 
     os.system('clear')  # clears terminal screen
-    board = insert_player(board, x_player, y_player)    # inserts player character on the gameboard
+    board = insert_player(board, x_player, y_player, character_color)    # inserts player character on the gameboard
     print_board(board)  # displays gameboard
     board = clear_player(board, x_player, y_player)  # clears place on the gameboard occupied by user
 
@@ -553,9 +571,34 @@ def print_end_image(game_won):
                     time.sleep(0.2)
 
 
+def create_player():
+    """Function asks user about name and color of the game character.
+
+    Return:
+        character_name (str): name of the character chosen by user
+        character_color (str): escape code for chosen character color
+    """
+
+    choose_colors_text = """
+    1. red
+    2. green
+    3. yellow\n"""
+    character_colors = {'1': '\033[31m', '2': '\033[32m', '3': '\033[33m'}
+    os.system('clear')
+    print('Character creation screen.')
+    character_name = input("Choose your character's name:")
+    chosen_character_color = ''
+    while chosen_character_color not in ['1', '2', '3']:
+        print("Choose your character's color [1, 2 or 3].")
+        chosen_character_color = input(choose_colors_text)
+    character_color = character_colors[chosen_character_color]
+    return character_name, character_color
+
+
 def main():
     #  intro()
-    level = 3
+    character_name, character_color = create_player()
+    level = 0
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
@@ -565,8 +608,8 @@ def main():
     game_won = False
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
-        manage_display(board, x_player, y_player)   # creates current frame of game animation
-        board, minions_location = move_minions(board, minions_location)
+        manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
+        board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed)
