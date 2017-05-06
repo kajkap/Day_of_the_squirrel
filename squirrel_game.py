@@ -330,9 +330,11 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy):
         hamster_energy (int): enemy's health points
     """
 
+    red = '\033[31m'
+    reset_color = '\033[0m'
     if hamster_energy == 100:
         for board[lines][columnes] in board:
-            if board[lines][columnes] == '§':
+            if board[lines][columnes] == red + '#' + reset_color:
                 board[lines][columnes] = ' '
     if board[y_player][x_player] == '🐹':
         hamster_energy = 0
@@ -353,18 +355,17 @@ def collecting_food(board, x_player, y_player, inventory, health):
         inventory (dict): collected items(keys) and their amounts (values)
         health (int): player's health points
     """
-
-    if board[y_player][x_player] == '●':
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+    reset_color = '\033[0m'
+    if board[y_player][x_player] == item_colors['●'] + '●' + reset_color:
         inventory['●'] += 1
-        print("orzeszek")
-    elif board[y_player][x_player] == '♦':
+    elif board[y_player][x_player] == item_colors['♦'] + '♦' + reset_color:
         inventory['♦'] += 1
-        print("diamencik")
-    elif board[y_player][x_player] == '⚛':
+    elif board[y_player][x_player] == item_colors['⚛'] + '⚛' + reset_color:
         inventory['●'] += 20
-    elif board[y_player][x_player] == '✡':
+    elif board[y_player][x_player] == item_colors['✡'] + '✡' + reset_color:
         health += 5
-    elif board[y_player][x_player] == '✿':
+    elif board[y_player][x_player] == item_colors['✿'] + '✿' + reset_color:
         health -= 5
     print(inventory)
 
