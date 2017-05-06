@@ -434,7 +434,7 @@ def manage_display(board, x_player, y_player):
     board = clear_player(board, x_player, y_player)  # clears place on the gameboard occupied by user
 
 
-def checking_level_end(level, inventory, x_player, y_player):
+def checking_level_end(level, inventory, x_player, y_player, hamster_energy):
     """Function checks if level end conditions were met.
 
     Args:
@@ -579,7 +579,7 @@ def main():
         board, hamster_energy = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy)
 
         # checks if level end conditions were met
-        next_level = checking_level_end(level, inventory, x_player, y_player)
+        next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy)
         if next_level:
             # sets parameters of next game level
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
