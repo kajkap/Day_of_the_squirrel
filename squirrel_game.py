@@ -219,7 +219,7 @@ def insert_food(board, level):
     elif level == 3:
         food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10}
     else:
-        food = {'●': 20, '⚛': 2, '✿': 20, '✡': 2, '♦': 10}
+        food = {'●': 20, '⚛': 5, '✿': 20, '✡': 2, '♦': 10}
 
     for key in food:
         for i in range(food[key]):
@@ -285,7 +285,7 @@ def insert_friends_and_hamster(board, level):
     if level == 4:
         board[24][113] = '🐹'
         lines = 37
-        columnes = 35
+        columnes = 34
         for friend in friends:
             board[lines][columnes] = friend
             columnes += 17
@@ -311,6 +311,7 @@ def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
     if inventory['●'] >= 20 and board[y_player][x_player] in ['🦆', '🦊', '🐰', '🐥', '🐻']:
         inventory['●'] -= 20
         hamster_energy -= 100
+    print(hamster_energy)
     return inventory, hamster_energy
 
 
@@ -333,9 +334,10 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy):
     red = '\033[31m'
     reset_color = '\033[0m'
     if hamster_energy == 100:
-        for board[lines][columnes] in board:
-            if board[lines][columnes] == red + '#' + reset_color:
-                board[lines][columnes] = ' '
+        for lines in range(40):
+            for columnes in range(120):
+                if board[lines][columnes] == red + '#' + reset_color:
+                    board[lines][columnes] = ' '
     if board[y_player][x_player] == '🐹':
         hamster_energy = 0
     return board, hamster_energy
@@ -482,6 +484,7 @@ def setting_next_level(level):
     if level == 5:
         game_won = True
         board = []
+        minions_location = []
     else:
         board = loading_level(str(level))
         board = insert_food(board, level)
@@ -552,7 +555,7 @@ def print_end_image(game_won):
 
 def main():
     #  intro()
-    level = 0
+    level = 3
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
