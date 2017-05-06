@@ -1,5 +1,7 @@
 import os
 import time
+import datetime
+import operator
 import random
 
 """
@@ -319,7 +321,7 @@ def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
     return inventory, hamster_energy
 
 
-def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy):
+def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_time):
     """Function removes the enemy's protection and
         defeats the enemy if the user is on enemy's position.
 
@@ -344,7 +346,9 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy):
                     board[lines][columnes] = ' '
     if board[y_player][x_player] == '🐹':
         hamster_energy = 0
-    return board, hamster_energy
+    end_time = time.time()
+    your_time = int(end_time - start_time)
+    return board, hamster_energy, your_time
 
 
 def collecting_food(board, x_player, y_player, inventory, health):
@@ -595,6 +599,69 @@ def create_player():
     return character_name, character_color
 
 
+def import_highscores(filename='highscores.txt'):
+    highscores = []
+    highscores_lines = []
+    with open(filename, 'r') as highscores_file:  # read high scores from the file and put each line to the list
+        scores = highscores_file.read().splitlines()
+        for score in scores:  # add separated scores to highscores_lines
+            if score != '':
+                highscores_lines.append(score)
+    for item in highscores_lines:  # add formatted scores to highscores list
+        item = item.split(' | ')
+        highscores.append(item)
+    return highscores
+
+
+def add_to_highscores(highscores, health, your_time):
+    name = '{:10s}'.format(input('What\'s your name? '))
+    date = str(datetime.date.today())
+    minutes = your_time // 60
+    seconds = your_time % 60
+    time = '{:3d}:{:02d}'.format(minutes, seconds)
+    score = [name, time, '{:5d}'.format(health), date]
+    highscores.append(score)
+    return highscores
+
+
+def sort_highscores(highscores):
+    highscores = sorted(highscores, key=operator.itemgetter(2), reverse=True)  # sort highscores list (secondary key)
+    highscores = sorted(highscores, key=operator.itemgetter(1))  # sort highscores list (primary key)
+    if len(highscores) > 10:
+        highscores = highscores[:10]
+    return highscores
+
+
+def export_highscores(highscores, health, your_time, filename='highscores.txt'):
+    highscores = add_to_highscores(highscores, health, your_time)
+    highscores = sort_highscores(highscores)
+    with open(filename, 'w') as highscores_file:  # save modified high scores into the file
+        for item in highscores:
+            highscores_file.write(' | '.join(item) + '\n')
+    return highscores
+
+
+def print_highscores(highscores):
+    os.system('clear')
+    print('\nHigh scores')
+    head_row = 'name' + ' '*9 + 'time' + ' '*4 + 'health' + ' '*3 + 'date' + ' '*6
+    print('-' * len(head_row))
+    print(head_row)
+    print('-' * len(head_row))
+    for item in highscores:
+        print(' | '.join(item))
+
+
+def display_highscores(game_won, health, your_time):
+    if not game_won:
+        highscores = import_highscores()
+        print_highscores(highscores)
+    else:
+        highscores = import_highscores()
+        highscores = export_highscores(highscores, health, your_time)
+        print_highscores(highscores)
+
+
 def main():
     #  intro()
     character_name, character_color = create_player()
@@ -603,9 +670,10 @@ def main():
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     button_pressed = ''
-    health = 20  # player's initial health point
+    health = 20  # player's initial health points
     hamster_energy = 600
     game_won = False
+    start_time = time.time()
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
@@ -622,7 +690,7 @@ def main():
         # checks if user encounters an enemy and chenges user properties if it has happened
         x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
         # checks enemy's energy, removes his protection and defeats him if the user is on his position
-        board, hamster_energy = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy)
+        board, hamster_energy, your_time = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_time)
 
         # checks if level end conditions were met
         next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy)
@@ -631,6 +699,7 @@ def main():
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     print_end_image(game_won)
+    display_highscores(game_won, health, your_time)
 
 
 if __name__ == '__main__':
