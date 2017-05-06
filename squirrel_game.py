@@ -331,10 +331,12 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
         y_player (int): vertical position of player on the board
         level (int): actual game level
         hamster_energy (int): enemy's health points
+        start_time (float): game start time in seconds
 
     Return:
         board (list): list of board rows (list)
         hamster_energy (int): enemy's health points
+        your_time (int): whole game time in seconds
     """
 
     red = '\033[31m'
@@ -463,9 +465,10 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy):
 
     Args:
         level (int): number of current game level
+        inventory (dict): collected items(keys) and their amounts (values)
         x_player (int): horizontal position of player on the board
         y_player (int): vertical position of player on the board
-        inventory (dict): collected items(keys) and their amounts (values)
+        hamster_energy (int) : enemy's health points
 
     Return:
         next_level (bool): True if level end conditions were met, False otherwise
@@ -492,10 +495,11 @@ def setting_next_level(level):
     Return:
         game_won (bool): True if player managed to finish the game, False otherwise
         level (int): number of next game level
+        inventory (dict): collected items(keys) and their amounts (values)
         board (list): list of board rows (list)
         x_player (int): horizontal position of player on the board
         y_player (int): vertical position of player on the board
-        inventory (dict): collected items(keys) and their amounts (values)
+        minions_location (list): list containing positions of enemies on the board
     """
 
     x_player = 1    # player's initial horizontal position
@@ -600,6 +604,15 @@ def create_player():
 
 
 def import_highscores(filename='highscores.txt'):
+    """Function imports high scores from .txt file, formats them and put them into highscore list.
+
+    Args:
+        filename (str): name of the file with high scores
+
+    Return:
+        highscores (list): list of high scores from .txt file
+    """
+
     highscores = []
     highscores_lines = []
     with open(filename, 'r') as highscores_file:  # read high scores from the file and put each line to the list
@@ -614,6 +627,17 @@ def import_highscores(filename='highscores.txt'):
 
 
 def add_to_highscores(highscores, health, your_time):
+    """Function adds new score to the highscore list.
+
+    Args:
+        highscores (list): list of high scores from .txt file
+        health (int): player's health points
+        your_time (int): whole game time in seconds
+
+    Return:
+        highscores (list): list of high scores with new score added
+    """
+
     name = '{:10s}'.format(input('What\'s your name? '))
     date = str(datetime.date.today())
     minutes = your_time // 60
@@ -625,6 +649,15 @@ def add_to_highscores(highscores, health, your_time):
 
 
 def sort_highscores(highscores):
+    """Function sorts high scores in the list (primary key = time of the game, secondary key = user's health points).
+
+    Args:
+        highscores (list): list of high scores from .txt file
+
+    Return:
+        highscores (list): list of high scores after sorting
+    """
+
     highscores = sorted(highscores, key=operator.itemgetter(2), reverse=True)  # sort highscores list (secondary key)
     highscores = sorted(highscores, key=operator.itemgetter(1))  # sort highscores list (primary key)
     if len(highscores) > 10:
@@ -633,6 +666,18 @@ def sort_highscores(highscores):
 
 
 def export_highscores(highscores, health, your_time, filename='highscores.txt'):
+    """Function exports highscores list to the .txt file after modification.
+
+    Args:
+        highscores (list): list of high scores after adding new score and sorting
+        health (int): player's health points
+        your_time (int): whole game time in seconds
+        filename (str): name of the file with high scores
+
+    Return:
+        highscores (list): list of high scores
+    """
+
     highscores = add_to_highscores(highscores, health, your_time)
     highscores = sort_highscores(highscores)
     with open(filename, 'w') as highscores_file:  # save modified high scores into the file
@@ -642,6 +687,11 @@ def export_highscores(highscores, health, your_time, filename='highscores.txt'):
 
 
 def print_highscores(highscores):
+    """Function prints highscores table.
+
+    Args:
+        highscores (list): list of high scores
+    """
     os.system('clear')
     print('\nHigh scores')
     head_row = 'name' + ' '*9 + 'time' + ' '*4 + 'health' + ' '*3 + 'date' + ' '*6
@@ -652,7 +702,14 @@ def print_highscores(highscores):
         print(' | '.join(item))
 
 
-def display_highscores(game_won, health, your_time):
+def menage_highscores(game_won, health, your_time):
+    """Function calls other high scores functions depending on the user's win or loss.
+
+    Args:
+        game_won (bool): True if player managed to finish the game, False otherwise
+        health (int): player's health points
+        your_time (int): whole game time in seconds
+    """
     if not game_won:
         highscores = import_highscores()
         print_highscores(highscores)
@@ -699,7 +756,7 @@ def main():
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     print_end_image(game_won)
-    display_highscores(game_won, health, your_time)
+    menage_highscores(game_won, health, your_time)
 
 
 if __name__ == '__main__':
