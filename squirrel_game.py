@@ -54,7 +54,7 @@ def loading_level(level_nr):
         board (list): list of board rows (list)
     """
 
-    red = '\033[31m'
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m'}
     reset_color = '\033[0m'
 
     level_file = open('level' + level_nr + '.txt')
@@ -69,7 +69,9 @@ def loading_level(level_nr):
         for character in line:
             board_line.append(character)
         # changes color of obstacles ('#') on the level map
-        board_line = [char.replace('#', red + '#' + reset_color) for char in board_line]
+        board_line = [char.replace('#', item_colors['ᴥ'] + '#' + reset_color) for char in board_line]
+        for key in item_colors:
+            board_line = [char.replace(key, item_colors[key] + key + reset_color) for char in board_line]
         board.append(board_line)
 
     return board
@@ -220,9 +222,9 @@ def insert_food(board, level):
     reset_color = '\033[0m'
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
-    elif level == 2:
-        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10}
     elif level == 3:
+        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10}
+    elif level == 2:
         food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10}
     else:
         food = {'●': 20, '⚛': 5, '✿': 20, '✡': 2, '♦': 10}
@@ -444,6 +446,21 @@ def move_minions(board, minions_location, character_color):
     return board, minions_location
 
 
+def update_board_information(board, level, character_name, health, inventory, start_time):
+    # food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+    reset_color = '\033[0m'
+    end_time = time.time()
+    your_time = int(end_time - start_time)
+    board[0][128] = str(level)
+    board[1][129] = character_name
+    board[2][129] = str(health)
+    board[3][127] = str(your_time)
+    board[6][121] = item_colors['●'] + '●' + reset_color + ' : ' + str(inventory['●'])  # inserts nr of nuts
+    board[7][121] = item_colors['♦'] + '♦' + reset_color + ' : ' + str(inventory['♦'])  # inserts nr of treasures
+    return board
+
+
 def manage_display(board, x_player, y_player, character_color):
     """Function takes care of game pseudo animation.
 
@@ -477,9 +494,9 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy):
     next_level = False
     if level == 1 and inventory['●'] >= 50:
         next_level = True
-    elif level == 2 and inventory['●'] >= 40 and x_player == 117 and y_player == 38:
+    elif level == 3 and inventory['●'] >= 40 and x_player == 117 and y_player == 38:
         next_level = True
-    elif level == 3 and inventory['●'] >= 60:
+    elif level == 2 and inventory['●'] >= 60:
         next_level = True
     elif level == 4 and hamster_energy == 0:
         next_level = True
@@ -594,7 +611,7 @@ def create_player():
     character_colors = {'1': '\033[31m', '2': '\033[32m', '3': '\033[33m'}
     os.system('clear')
     print('Character creation screen.')
-    character_name = input("Choose your character's name:")
+    character_name = input("Choose your character's name: ")
     chosen_character_color = ''
     while chosen_character_color not in ['1', '2', '3']:
         print("Choose your character's color [1, 2 or 3].")
@@ -733,6 +750,8 @@ def main():
     start_time = time.time()
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
+        # update text info on board
+        board = update_board_information(board, level, character_name, health, inventory, start_time)
         manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
         board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
@@ -748,7 +767,6 @@ def main():
         x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
         # checks enemy's energy, removes his protection and defeats him if the user is on his position
         board, hamster_energy, your_time = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_time)
-
         # checks if level end conditions were met
         next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy)
         if next_level:
