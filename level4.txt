@@ -1,32 +1,32 @@
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*.’.’.’.’.’.’*’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*’.’.’.’.’.’.’.’.’X
-X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’***’.’.’.’.’.***.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.***.’.’.’.’.’.’.’.’X
-X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*****.’.’.’.’*****’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*****’.’.’.’.’.’.’.’X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Level: Ỻ
+X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*.’.’.’.’.’.’*’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*’.’.’.’.’.’.’.’.’X Player: Ṅ
+X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’***’.’.’.’.’.***.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.***.’.’.’.’.’.’.’.’X Health: Ĥ
+X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*****.’.’.’.’*****’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*****’.’.’.’.’.’.’.’X Time: T
 X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*******’.’.’.*******.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*******.’.’.’.’.’.’.’X
-X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.|.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’X
-X     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.|.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’X Inventory:
+X     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .
+X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .
 X       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXX                   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXX                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXX         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXX                                                                                                      X
+XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Legend:
+XXX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ● : nut
+XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ♦ : hidden treasures
+XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ⚛ : bag full of nuts
+XXXX      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ✡ : first aid
+XXXX                   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ✿ : rotten food
+XXXX                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X : common obstacle
+XXXXXXXXXXXXXXXX         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX # : thorny bush
+XXXXXXXXXXXXXXXXX                                                                                                      X ᴥ : evil minion
 XXXXXXXXXXXXXXXXXX                                                                                                     X
 XXXXXXXXXXXXXXXXXXX                                                                                                    X
 XXXXXXXXXXXXXXXXXXXX                                                                                                   X
 XXXXXXXXXXXXXXXXXXXXX                                                                                        ##########X
 XXXXXXXXXXXXXXXXXXXXXX                                                                                       #         X
-XXXXXXXXXXXXXXXXXXXXXXX                                                                                      #         X
-XXXXXXXXXXXXXXXXXXXXXXXX                                                                                     #         X
-XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    #         X
-XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    #         X
-XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    ##########X
-XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
+XXXXXXXXXXXXXXXXXXXXXXX                                                                                      #         X Controls:
+XXXXXXXXXXXXXXXXXXXXXXXX                                                                                     #         X w : up
+XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    #         X s : down
+XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    #         X a : left
+XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                    ##########X d : right
+XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X \ : exit
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
@@ -38,3 +38,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXX   X           X    X           X    X           X    X
 XXXXXXXXXXXXXXXXXXXXXXXXX   X           X    X           X    X           X    X           X    X           X          X
 XXXXXXXXXXXXXXXXXXXXXXXXX   X           X    X           X    X           X    X           X    X           X          X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Story plot:
+You reached the ancient prison. Story plot:
+You reached the maze. You don't believe your eyes but there are your friends imprisoned by the Evil Hamster (yes, the same
+who killed the father of little mouse in The Mousser). They are hungry and exhausted. You have to collect food to feed them.
+You can't defeat the Evil Hamster directly because he is protected by thorny bush. He draws his power from his prisoners.
+Feed them so they would have the power to escape and The Evil Hamster remain powerless.
+
+Goal: Collect 20 nuts for every friend and feed them. Defeat the Evil Hamster.

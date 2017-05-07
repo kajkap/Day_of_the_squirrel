@@ -1,32 +1,32 @@
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                                                                                                                      X
-X                                                                                                                      X
-X                                                                XXXXXXX                                               X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Level: Ỻ
+X                                                                                                                      X Player: Ṅ
+X                                                                                                                      X Health: Ĥ
+X                                                                XXXXXXX                                               X Time: T
 X                                                               XMMMMMMNX         XX                                   X
-X                                                            XXXMMMMMMMMhXX      XmMX                                  X
-X                                                          XXXMMMMMMMMMMMMNXX   XmMMMX                                 X
-X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X
+X                                                            XXXMMMMMMMMhXX      XmMX                                  X Inventory:
+X                                                          XXXMMMMMMMMMMMMNXX   XmMMMX                                 X .
+X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X .
 X            XXXXXX                                        XMMMMMMMMMMMMMMMMMXXNMMMMMMMX                    X..X       X
-X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X
-X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X
-X           X      X                                   XNMMMMMMMMMMMMMMMMMm/.dMMMMMMMMMMMX                             X
-X                                                      XMMMMMMMMMMMMMMMMMMd-yMMMMMMMMMMMMNX                            X
-X                                                      XXMMMMMMMMNMMMMNMMN+`sMMMMMMMMMMMMNX                            X
-X                                                       XXXMMMNXXXXMMXXXXXXXXXXXXXXXXXXXXXXX                           X
-X                                                         XXXXXX  XMMX           XMX                                   X
-X                                                                 XMMX           XMX                                   X
-X                                                                 XMMX           XMX                                   X
+X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X Legend:
+X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X ● : nut
+X           X      X                                   XNMMMMMMMMMMMMMMMMMm/.dMMMMMMMMMMMX                             X ♦ : hidden treasures
+X                                                      XMMMMMMMMMMMMMMMMMMd-yMMMMMMMMMMMMNX                            X ⚛ : bag full of nuts
+X                                                      XXMMMMMMMMNMMMMNMMN+`sMMMMMMMMMMMMNX                            X ✡ : first aid
+X                                                       XXXMMMNXXXXMMXXXXXXXXXXXXXXXXXXXXXXX                           X ✿ : rotten food
+X                                                         XXXXXX  XMMX           XMX                                   X X : common obstacle
+X                                                                 XMMX           XMX                                   X # : thorny bush
+X                                                                 XMMX           XMX                                   X ᴥ : evil minion
 X                                                                 XXXX           XXX              XXXXXX               X
 X                             XXX                                                                  X..X                X
 X                           XMMXXXX                                                             XXXXXXXXXX             X
 X                          XXMMMMMMXX                                                            X      X              X
 X                           XMMMMMmNMXX                                                                                X
-X                        XXXmMMMMMdXXoXX                          XXXXXX                                               X
-X                       XXXXMMMMMMMNsX                             X..X                                                X
-X                         XhMNdMMMMmdXXXX                       XXXXXXXXXX                                             X
-X                       XXXo:mMMMMMXXXXXXX                       X      X                                              X
-X                     XXXXXdMMMMMMMMXX                                                           XXXXXXXX              X
-X                         XNMMMMMmXXXXXXXX                                                        XXXXXX               X
+X                        XXXmMMMMMdXXoXX                          XXXXXX                                               X Controls:
+X                       XXXXMMMMMMMNsX                             X..X                                                X w : up
+X                         XhMNdMMMMmdXXXX                       XXXXXXXXXX                                             X s : down
+X                       XXXo:mMMMMMXXXXXXX                       X      X                                              X a : left
+X                     XXXXXdMMMMMMMMXX                                                           XXXXXXXX              X d : right
+X                         XNMMMMMmXXXXXXXX                                                        XXXXXX               X \ : exit
 X                     XXXXXXXXXXXXXXXX                                                             XXXX                X
 X         XXXXXX               XXX                                                                X    X               X
 X          X..X                XXX                                                               X      X              X
@@ -38,3 +38,9 @@ X                                                            XXXXXXXXXX         
 X                                                             X      X                                                 X
 X                                                                                                                      X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Story plot:
+Looking for your friends you reached the picnic glade. You have to make up your inventory and find secret passage to the
+maze leading to the ancient ruins of long forgotten prison. Beware the evil minions roaming the forest. You are no match
+for them so stay away from them.
+
+Goal: Collect 60 nuts to make up your inventory. Light all 6 lamps to find secret entrance to the maze.
