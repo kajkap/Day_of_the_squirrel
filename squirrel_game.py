@@ -159,18 +159,24 @@ def user_control(board, x_player, y_player, button_pressed, inventory):
 
     red = '\033[31m'
     reset_color = '\033[0m'
+    item_colors = {
+        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m',
+        '♦': '\033[32m', 'ᴥ': '\033[31m', '☀': '\033[33m'}
     place_on_right_side = board[y_player][x_player + 1]
     place_on_left_side = board[y_player][x_player - 1]
     place_on_up_side = board[y_player - 1][x_player]
     place_on_down_side = board[y_player + 1][x_player]
+    places_prohibited_to_stand_on = [
+            'X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', item_colors['☀'] + '☀' + reset_color, red
+            + '☀' + reset_color]
 
-    if button_pressed == 'd' and place_on_right_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
+    if button_pressed == 'd' and place_on_right_side not in places_prohibited_to_stand_on:
         x_player += 1
-    elif button_pressed == 'a' and place_on_left_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
+    elif button_pressed == 'a' and place_on_left_side not in places_prohibited_to_stand_on:
         x_player -= 1
-    elif button_pressed == 'w' and place_on_up_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬' '☀', '☀']:
+    elif button_pressed == 'w' and place_on_up_side not in places_prohibited_to_stand_on:
         y_player -= 1
-    elif button_pressed == 's' and place_on_down_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
+    elif button_pressed == 's' and place_on_down_side not in places_prohibited_to_stand_on:
         y_player += 1
 
     #  conditions for level 4 (feeding friends)
@@ -228,7 +234,9 @@ def insert_food(board, level):
         board (list): list of board rows (list) after food to collect insertion
     """
 
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m'}
+    item_colors = {
+        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m',
+        '♦': '\033[32m', 'ᴥ': '\033[31m', '☀': '\033[33m'}
     reset_color = '\033[0m'
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
@@ -745,15 +753,54 @@ def menage_highscores(game_won, health, your_time, character_name):
         print_highscores(highscores)
 
 
+def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
+    """Function lights magic lamps in contact with user.
+
+    Args:
+        board (list): list of board rows (list)
+        x_player (int): horizontal position of player on the board
+        y_player (int): vertical position of player on the board
+        button_pressed (str): button pressed by user
+        lamps_lit (int): number of lit magic lamps
+
+    Return:
+        board (list): list of board rows (list)
+        lamps_lit (int): number of lit magic lamps
+    """
+
+    reset_color = '\033[0m'
+    lamps_colors = {
+        'on': '\033[31m', 'off': '\033[33m'}
+    place_on_right_side = board[y_player][x_player + 1]
+    place_on_left_side = board[y_player][x_player - 1]
+    place_on_up_side = board[y_player - 1][x_player]
+    place_on_down_side = board[y_player + 1][x_player]
+
+    if button_pressed == 'd' and place_on_right_side == lamps_colors['off'] + '☀' + reset_color:
+        lamps_lit += 1
+        board[y_player][x_player + 1] = lamps_colors['on'] + '☀' + reset_color
+    elif button_pressed == 'a' and place_on_left_side == lamps_colors['off'] + '☀' + reset_color:
+        lamps_lit += 1
+        board[y_player][x_player - 1] = lamps_colors['on'] + '☀' + reset_color
+    elif button_pressed == 'w' and place_on_up_side == lamps_colors['off'] + '☀' + reset_color:
+        lamps_lit += 1
+        board[y_player - 1][x_player] = lamps_colors['on'] + '☀' + reset_color
+    elif button_pressed == 's' and place_on_down_side == lamps_colors['off'] + '☀' + reset_color:
+        lamps_lit += 1
+        board[y_player + 1][x_player] = lamps_colors['on'] + '☀' + reset_color
+    return board, lamps_lit
+
+
 def main():
     #  intro()
     character_name, character_color = create_player()
-    level = 3
+    level = 1
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     button_pressed = ''
     health = 20  # player's initial health points
+    lamps_lit = 0
     hamster_energy = 600
     game_won = False
     start_time = time.time()
@@ -766,6 +813,8 @@ def main():
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed, inventory)
+        # lights magic lamps in contact with user
+        board, lamps_lit = light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit)
         # checks if user encounters an obstacle and lowers user health
         health = check_obstacle_contact(board, x_player, y_player, button_pressed, health)
         # changes user inventory and health if user collected special items

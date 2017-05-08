@@ -39,10 +39,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXX   X           X    X           X    X           X    X
 XXXXXXXXXXXXXXXXXXXXXXXXX   X           X    X           X    X           X    X           X    X           X          X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Story plot:
-You reached the ancient prison. Story plot:
-You reached the maze. You don't believe your eyes but there are your friends imprisoned by the Evil Hamster (yes, the same
-who killed the father of little mouse in The Mousser). They are hungry and exhausted. You have to collect food to feed them.
-You can't defeat the Evil Hamster directly because he is protected by thorny bush. He draws his power from his prisoners.
-Feed them so they would have the power to escape and The Evil Hamster remain powerless.
+You reached the ancient prison. You don't believe your eyes but there are your friends imprisoned by the Evil Hamster
+(yes, the same one who killed the father of little mouse in The Mousser). They are hungry and exhausted. You have to
+collect food to feed them. You can't defeat the Evil Hamster directly because he is protected by thorny bush. He draws
+his power from his prisoners. Feed them so they would have the power to escape and The Evil Hamster remain powerless.
 
 Goal: Collect 20 nuts for every friend and feed them. Defeat the Evil Hamster.
