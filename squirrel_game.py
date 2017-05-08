@@ -392,7 +392,7 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
             for columnes in range(120):
                 if board[lines][columnes] == red + '#' + reset_color:
                     board[lines][columnes] = ' '
-    if board[y_player][x_player] == '🐹':
+    if y_player in range(20, 29) and x_player in range(100, 118):
         hamster_energy = 0
     end_time = time.time()
     your_time = int(end_time - start_time)
