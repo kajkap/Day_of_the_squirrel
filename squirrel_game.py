@@ -669,7 +669,7 @@ def add_to_highscores(highscores, health, your_time, character_name):
     minutes = your_time // 60
     seconds = your_time % 60
     time = '{:3d}:{:02d}'.format(minutes, seconds)
-    score = [character_name, time, '{:5d}'.format(health), date]
+    score = ['{:10s}'.format(character_name), time, '{:5d}'.format(health), date]
     highscores.append(score)
     return highscores
 
