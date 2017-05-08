@@ -326,7 +326,7 @@ def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
         hamster_energy (int): enemy's health points
     """
 
-    if inventory['●'] >= 20 and board[y_player][x_player] in ['🦆', '🦊', '🐰', '🐥', '🐻']:
+    if inventory['●'] >= 20 and board[y_player][x_player] in ['☹', '☃', '♞', '☻', '☬']:
         inventory['●'] -= 20
         hamster_energy -= 100
     print(hamster_energy)
@@ -691,7 +691,7 @@ def sort_highscores(highscores):
     return highscores
 
 
-def export_highscores(highscores, health, your_time, filename='highscores.txt'):
+def export_highscores(highscores, health, your_time, character_name, filename='highscores.txt'):
     """Function exports highscores list to the .txt file after modification.
 
     Args:
@@ -728,7 +728,7 @@ def print_highscores(highscores):
         print(' | '.join(item))
 
 
-def menage_highscores(game_won, health, your_time):
+def menage_highscores(game_won, health, your_time, character_name):
     """Function calls other high scores functions depending on the user's win or loss.
 
     Args:
@@ -741,7 +741,7 @@ def menage_highscores(game_won, health, your_time):
         print_highscores(highscores)
     else:
         highscores = import_highscores()
-        highscores = export_highscores(highscores, health, your_time)
+        highscores = export_highscores(highscores, health, your_time, character_name)
         print_highscores(highscores)
 
 
@@ -784,7 +784,7 @@ def main():
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     print_end_image(game_won)
-    menage_highscores(game_won, health, your_time)
+    menage_highscores(game_won, health, your_time, character_name)
 
 
 if __name__ == '__main__':
