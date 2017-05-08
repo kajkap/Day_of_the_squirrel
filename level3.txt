@@ -35,8 +35,8 @@ X   X   X   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXXXXXX   XXXXX   
 X   X       X   X   X       X       X   X   X           X               X       X   X   X       X           X          X
 X   X       X   X   X       X       X   X   X           X               X       X   X   X       X           X          X
 X   XXXXXXXXXXXXX   X   XXXXX   XXXXX   X   XXXXX   X   XXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X          X
-X                   X           X       X           X           X       X           X       X       X       X       XXXX
-X                   X           X       X           X           X       X           X       X       X       X       X⇵.X
+X                   X           X       X           X           X       X           X       X       X       X       ###X
+X                   X           X       X           X           X       X           X       X       X       X       #⇵.X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Story plot:
 You reached the maze. It's really dangerous place. You have to hurry up an leave this place as soon as possible. You have

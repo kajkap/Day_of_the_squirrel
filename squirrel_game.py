@@ -298,25 +298,52 @@ def insert_minions(board, level):
     return board, minions_location
 
 
-def insert_friends_and_hamster(board, level):
-    """Function inserts evil hamster and squirrel's friends into gameboard.
+def insert_friends(board, level):
+    """Function insert squirrel's friends into gameboard.
 
     Args:
         board (list): list of board rows (list)
         level (int): actual game level
 
     Return:
-        board (list): list of board rows (list) after friends and hamster insertion
+        board (list): list of board rows (list) after friends insertion
     """
 
     friends = ['☹', '☃', '♞', '☻', '☬']
     if level == 4:
-        board[24][113] = '🐹'
         lines = 37
         columnes = 34
         for friend in friends:
             board[lines][columnes] = friend
             columnes += 17
+    return board
+
+
+def colour_hamster(board, level):
+    """Function colours hamster image on level4 gameboard.
+
+    Args:
+        board (list): list of board rows (list)
+        level (int): actual game level
+
+    Return:
+        board (list): list of board rows (list) after colouring hamster
+    """
+
+    blue = '\033[34m'
+    darkgrey = '\033[90m'
+    yellow = '\033[93m'
+    reset_color = '\033[0m'
+
+    if level == 4:
+        for lines in range(20, 31):
+            for columnes in range(100, 120):
+                if board[lines][columnes] == '&':
+                    board[lines][columnes] = blue + '&' + reset_color
+                elif board[lines][columnes] == '*':
+                    board[lines][columnes] = darkgrey + '*' + reset_color
+                elif board[lines][columnes] == '%':
+                    board[lines][columnes] = yellow + '%' + reset_color
     return board
 
 
@@ -339,7 +366,6 @@ def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
     if inventory['●'] >= 20 and board[y_player][x_player] in ['☹', '☃', '♞', '☻', '☬']:
         inventory['●'] -= 20
         hamster_energy -= 100
-    print(hamster_energy)
     return inventory, hamster_energy
 
 
@@ -368,7 +394,7 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
             for columnes in range(120):
                 if board[lines][columnes] == red + '#' + reset_color:
                     board[lines][columnes] = ' '
-    if board[y_player][x_player] == '🐹':
+    if y_player in range(20, 29) and x_player in range(100, 118):
         hamster_energy = 0
     end_time = time.time()
     your_time = int(end_time - start_time)
@@ -391,7 +417,7 @@ def enable_level_exit(board, level, inventory, lamps_lit):
     red = '\033[31m'
     reset_color = '\033[0m'
     if (level == 1 and inventory['●'] > 59) or (level == 2 and inventory['●'] > 59 and lamps_lit == 6) or (
-            level == 3 and inventory['●'] > 59 and lamps_lit == 6):
+            level == 3 and inventory['●'] > 59):
         for lines in range(37, 39):
             for columnes in range(116, 119):
                 if board[lines][columnes] == red + '#' + reset_color:
@@ -573,7 +599,8 @@ def setting_next_level(level):
         board = loading_level(str(level))
         board = insert_food(board, level)
         board, minions_location = insert_minions(board, level)
-        board = insert_friends_and_hamster(board, level)
+        board = insert_friends(board, level)
+        board = colour_hamster(board, level)
         game_won = False
 
     return game_won, level, inventory, board, x_player, y_player, minions_location
@@ -820,7 +847,7 @@ def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
 def main():
     #  intro()
     character_name, character_color = create_player()
-    level = 0
+    level = 3
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
