@@ -326,7 +326,7 @@ def feeding_friends(board, x_player, y_player, inventory, hamster_energy):
         hamster_energy (int): enemy's health points
     """
 
-    if inventory['●'] >= 20 and board[y_player][x_player] in ['🦆', '🦊', '🐰', '🐥', '🐻']:
+    if inventory['●'] >= 20 and board[y_player][x_player] in ['☹', '☃', '♞', '☻', '☬']:
         inventory['●'] -= 20
         hamster_energy -= 100
     print(hamster_energy)
