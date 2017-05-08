@@ -54,7 +54,9 @@ def loading_level(level_nr):
         board (list): list of board rows (list)
     """
 
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m'}
+    item_colors = {
+        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m',
+        '#': '\033[31m'}
     reset_color = '\033[0m'
 
     level_file = open('level' + level_nr + '.txt')
@@ -68,8 +70,7 @@ def loading_level(level_nr):
         board_line = []
         for character in line:
             board_line.append(character)
-        # changes color of obstacles ('#') on the level map
-        board_line = [char.replace('#', item_colors['ᴥ'] + '#' + reset_color) for char in board_line]
+        # changes color of elements on the level map
         for key in item_colors:
             board_line = [char.replace(key, item_colors[key] + key + reset_color) for char in board_line]
         board.append(board_line)
@@ -179,14 +180,15 @@ def user_control(board, x_player, y_player, button_pressed, inventory):
     elif button_pressed == 's' and place_on_down_side not in places_prohibited_to_stand_on:
         y_player += 1
 
+    friends = ['☹', '☃', '♞', '☻', '☬']
     #  conditions for level 4 (feeding friends)
-    if button_pressed == 'd' and place_on_right_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+    if button_pressed == 'd' and place_on_right_side in friends and inventory['●'] > 19:
         x_player += 1
-    elif button_pressed == 'a' and place_on_left_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+    elif button_pressed == 'a' and place_on_left_side in friends and inventory['●'] > 19:
         x_player -= 1
-    elif button_pressed == 'w' and place_on_up_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+    elif button_pressed == 'w' and place_on_up_side in friends and inventory['●'] > 19:
         y_player -= 1
-    elif button_pressed == 's' and place_on_down_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+    elif button_pressed == 's' and place_on_down_side in friends and inventory['●'] > 19:
         y_player += 1
     return x_player, y_player
 
@@ -373,6 +375,31 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
     return board, hamster_energy, your_time
 
 
+def enable_level_exit(board, level, inventory, lamps_lit):
+    """Function removes barrier around exit enabling player go to the next level.
+
+    Args:
+        board (list): list of board rows (list)
+        inventory (dict): collected items(keys) and their amounts (values)
+        level (int): current game level
+        lamps_lit (int): number of lit magical lamps
+
+    Return:
+        board (list): list of board rows (list)
+    """
+
+    red = '\033[31m'
+    reset_color = '\033[0m'
+    if (level == 1 and inventory['●'] > 59) or (level == 2 and inventory['●'] > 59 and lamps_lit == 6) or (
+            level == 3 and inventory['●'] > 59 and lamps_lit == 6):
+        for lines in range(37, 39):
+            for columnes in range(116, 119):
+                if board[lines][columnes] == red + '#' + reset_color:
+                    board[lines][columnes] = ' '
+
+    return board
+
+
 def collecting_food(board, x_player, y_player, inventory, health):
     """Function adds collected items into inventory.
 
@@ -495,7 +522,7 @@ def manage_display(board, x_player, y_player, character_color):
     board = clear_player(board, x_player, y_player)  # clears place on the gameboard occupied by user
 
 
-def checking_level_end(level, inventory, x_player, y_player, hamster_energy):
+def checking_level_end(level, inventory, x_player, y_player, hamster_energy, board):
     """Function checks if level end conditions were met.
 
     Args:
@@ -510,11 +537,7 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy):
     """
 
     next_level = False
-    if level == 1 and inventory['●'] >= 50:
-        next_level = True
-    elif level == 3 and inventory['●'] >= 40 and x_player == 117 and y_player == 38:
-        next_level = True
-    elif level == 2 and inventory['●'] >= 60:
+    if level in [1, 2, 3] and board[y_player][x_player] == '⇵':
         next_level = True
     elif level == 4 and hamster_energy == 0:
         next_level = True
@@ -797,7 +820,7 @@ def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
 def main():
     #  intro()
     character_name, character_color = create_player()
-    level = 1
+    level = 0
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
@@ -829,8 +852,10 @@ def main():
         # checks enemy's energy, removes his protection and defeats him if the user is on his position
         board, hamster_energy, your_time = evil_hamster_defeat(
             board, x_player, y_player, level, hamster_energy, start_time)
+        # opens passage to the next level
+        board = enable_level_exit(board, level, inventory, lamps_lit)
         # checks if level end conditions were met
-        next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy)
+        next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy, board)
         if next_level:
             # sets parameters of next game level
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)

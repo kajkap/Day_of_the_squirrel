@@ -1,43 +1,43 @@
-######################################################################################################################## Level: Ỻ
-#           #           #               #                   #   #       #           #           #           #       #  # Player: Ṅ
-#           #           #               #                   #   #       #           #           #           #       #  # Health: Ĥ
-#   #####   #   #####   #   #########   #################   #   #   #   #   #####   #   #####   #   #####   #   #   #  # Time: T
-#       #       #       #       #   #           #       #       #   #   #   #   #   #   #       #       #   #   #   #  #
-#       #       #       #       #   #           #       #       #   #   #   #   #   #   #       #       #   #   #   #  # Inventory:
-#################   #########   #   #########   #   #   #####   #   #   #   #   #   #####   #########   #   #   #   #  # .
-#   #       #       #           #               #   #       #       #   #   #   #   #               #   #   #   #   #  # .
-#   #       #       #           #               #   #       #       #   #   #   #   #               #   #   #   #   #  #
-#   #   #   #   #####   #####   #   #####################   #####   #####   #   #   #   #   #####   #   #   #####   #  # Legend:
-#   #   #   #   #           #   #   #       #       #   #       #       #       #   #   #   #       #   #       #   #  # ● : nut
-#   #   #   #   #           #   #   #       #       #   #       #       #       #   #   #   #       #   #       #   #  # ♦ : hidden treasures
-#   #   #   #   #########   #   #   #   #   #####   #   #####   #####   #   #####   #####   #   #   #########   #   #  # ⚛ : bag full of nuts
-#       #   #           #   #   #       #           #   #   #       #   #       #       #   #   #       #           #  # ✡ : first aid
-#       #   #           #   #   #       #           #   #   #       #   #       #       #   #   #       #           #  # ✿ : rotten food
-#   #   #####   #####   #   #################   #####   #   #####   #   #   #   #####   #   #   #####   #   #   #####  # X : common obstacle
-#   #           #       #       #               #           #       #   #   #       #       #       #   #   #   #   #  # # : thorny bush
-#   #           #       #       #               #           #       #   #   #       #       #       #   #   #   #   #  # ᴥ : evil minion
-#   #############   #########   #   #############   #####   #   #####   #   #####################   #   #####   #   #  #
-#   #       #   #               #       #       #       #               #           #   #           #           #   #  #
-#   #       #   #               #       #       #       #               #           #   #           #           #   #  #
-#   #   #   #   #####   #############   #   #   #####   #####   #################   #   #   #####################   #  #
-#   #   #       #       #           #   #   #       #   #   #   #               #   #       #           #           #  #
-#   #   #       #       #           #   #   #       #   #   #   #               #   #       #           #           #  # Controls:
-#   #   #####   #   #############   #   #   #####   #   #   #   #   #   #   #####   #########   #####   #   #########  # w : up
-#   #   #       #       #       #       #   #       #   #       #   #   #       #   #       #   #   #   #           #  # s : down
-#   #   #       #       #       #       #   #       #   #       #   #   #       #   #       #   #   #   #           #  # a : left
-#   #####   #########   #   #   #########   #   #####   #   #####   #   #####   #   #####   #   #   #   #   #####   #  # d : right
-#           #       #   #   #   #           #   #       #           #   #   #   #       #   #   #       #   #       #  # \ : exit
-#           #       #   #   #   #           #   #       #           #   #   #   #       #   #   #       #   #       #  #
-#########   #   #   #   #####   #   #########   #   #################   #   #   #   #   #   #   #########   #   #####  #
-#       #   #   #   #   #       #   #               #   #           #   #       #   #   #                   #       #  #
-#       #   #   #   #   #       #   #               #   #           #   #       #   #   #                   #       #  #
-#   #   #   #   #   #   #   #####   #   #####   #####   #   #########   #####   #   #   #########   #############   #  #
-#   #       #   #   #       #       #   #   #           #               #       #   #   #       #           #       #  #
-#   #       #   #   #       #       #   #   #           #               #       #   #   #       #           #       #  #
-#   #############   #   #####   #####   #   #####   #   #########   #####   #####   #   #   #   #   #####   #   #####  #
-#                   #           #       #           #           #       #           #       #       #       #          #
-#                   #           #       #           #           #       #           #       #       #       #        ♜ #
-########################################################################################################################
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Level: Ỻ
+X           X           X               X                   X   X       X           X           X           X       X  X Player: Ṅ
+X           X           X               X                   X   X       X           X           X           X       X  X Health: Ĥ
+X   XXXXX   X   XXXXX   X   XXXXXXXXX   XXXXXXXXXXXXXXXXX   X   X   X   X   XXXXX   X   XXXXX   X   XXXXX   X   X   X  X Time: T
+X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X
+X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X Inventory:
+XXXXXXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXX   X   X   XXXXX   X   X   X   X   X   XXXXX   XXXXXXXXX   X   X   X   X  X .
+X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X .
+X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X
+X   X   X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X   X   XXXXX   X  X Legend:
+X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X ● : nut
+X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X ♦ : hidden treasures
+X   X   X   X   XXXXXXXXX   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXX   XXXXX   X   X   XXXXXXXXX   X   X  X ⚛ : bag full of nuts
+X       X   X           X   X   X       X           X   X   X       X   X       X       X   X   X       X           X  X ✡ : first aid
+X       X   X           X   X   X       X           X   X   X       X   X       X       X   X   X       X           X  X ✿ : rotten food
+X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXX   XXXXX   X   XXXXX   X   X   X   XXXXX   X   X   XXXXX   X   X   XXXXX  X X : common obstacle
+X   X           X       X       X               X           X       X   X   X       X       X       X   X   X   X   X  X # : thorny bush
+X   X           X       X       X               X           X       X   X   X       X       X       X   X   X   X   X  X ᴥ : evil minion
+X   XXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXXXXXX   XXXXX   X   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   X   XXXXX   X   X  X ⇵ : passage to the next level
+X   X       X   X               X       X       X       X               X           X   X           X           X   X  X
+X   X       X   X               X       X       X       X               X           X   X           X           X   X  X
+X   X   X   X   XXXXX   XXXXXXXXXXXXX   X   X   XXXXX   XXXXX   XXXXXXXXXXXXXXXXX   X   X   XXXXXXXXXXXXXXXXXXXXX   X  X
+X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X
+X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X Controls:
+X   X   XXXXX   X   XXXXXXXXXXXXX   X   X   XXXXX   X   X   X   X   X   X   XXXXX   XXXXXXXXX   XXXXX   X   XXXXXXXXX  X w : up
+X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X s : down
+X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X a : left
+X   XXXXX   XXXXXXXXX   X   X   XXXXXXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   X   X   X   XXXXX   X  X d : right
+X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X \ : exit
+X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X
+XXXXXXXXX   X   X   X   XXXXX   X   XXXXXXXXX   X   XXXXXXXXXXXXXXXXX   X   X   X   X   X   X   XXXXXXXXX   X   XXXXX  X
+X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
+X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
+X   X   X   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXXXXXX   XXXXX   X   X   XXXXXXXXX   XXXXXXXXXXXXX   X  X
+X   X       X   X   X       X       X   X   X           X               X       X   X   X       X           X          X
+X   X       X   X   X       X       X   X   X           X               X       X   X   X       X           X          X
+X   XXXXXXXXXXXXX   X   XXXXX   XXXXX   X   XXXXX   X   XXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X          X
+X                   X           X       X           X           X       X           X       X       X       X       XXXX
+X                   X           X       X           X           X       X           X       X       X       X       X⇵.X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Story plot:
 You reached the maze. It's really dangerous place. You have to hurry up an leave this place as soon as possible. You have
 to make up your inventory, find all the shards of the key to the ancient prison and reach the exit. Beware the evil

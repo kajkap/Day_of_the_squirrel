@@ -16,7 +16,7 @@ X                                                       XXXMMMNXXXXMMXXXXXXXXXXX
 X                                                         XXXXXX  XMMX           XMX                                   X X : common obstacle
 X                                                                 XMMX           XMX                                   X # : thorny bush
 X                                                                 XMMX           XMX                                   X ᴥ : evil minion
-X                                                                 XXXX           XXX              XXXXXX               X
+X                                                                 XXXX           XXX              XXXXXX               X ⇵ : passage to the next level
 X                             XXX                                                                  X..X                X
 X                           XMMXXXX                                                             XXXXXXXXXX             X
 X                          XXMMMMMMXX                                                            X      X              X
@@ -35,8 +35,8 @@ X         X    X                                                                
 X                                                              XXXXXX                                                  X
 X                                                               X..X                                                   X
 X                                                            XXXXXXXXXX                                                X
-X                                                             X      X                                                 X
-X                                                                                                                      X
+X                                                             X      X                                              ###X
+X                                                                                                                   #⇵.X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Story plot:
 Looking for your friends you reached the picnic glade. You have to make up your inventory and find secret passage to the

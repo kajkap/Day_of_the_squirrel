@@ -16,7 +16,7 @@ X                    XXXoooXXX            XXX      XXX     XXX         XX%%;XXXX
 X                 XXXoooooooooXXX          XXXXX    X%XX XXX        XX X@%;XX                    XXX@$$\$$$$$XXX       X X : common obstacle
 X                XoooooooooooooooX            XXXXX  XXbdXX         X%X@%XX                    XXXXXXXX$$\XXXXXXXX     X # : thorny bush
 X                 XXXXXoooooXXXXX               XX%XX  X;XX         X@@%XX                             XXX             X ᴥ : evil minion
-X                      X\o/X                      X@XX  XX@XX      X@@%X                               XXX             X
+X                      X\o/X                      X@XX  XX@XX      X@@%X                               XXX             X ⇵ : passage to the next level
 X                       XoX                         X@XXX X@%X    X@@%X                                XXX             X
 X                       XoX                           X@XXXX@%XXXX@@%X                                                 X
 X                      XXXXX                            X@bd%%%bd%%:X                                                  X
@@ -35,8 +35,8 @@ X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                    
 X                                                                                            X---X                     X
 X                                                                                         XXXXXXXXXX                   X
 X                   # # # # # #                            # # # # # #                                                 X
-X                  # # # # # # #                          # # # # # # #                                                X
-X                                                                                                                      X
+X                  # # # # # # #                          # # # # # # #                                             ###X
+X                                                                                                                   #⇵.X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Story plot:
 You woke up one day and realized that all your friends disappeared and you are alone in your forest. You have to find your
