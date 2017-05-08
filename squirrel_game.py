@@ -643,7 +643,7 @@ def import_highscores(filename='highscores.txt'):
     return highscores
 
 
-def add_to_highscores(highscores, health, your_time):
+def add_to_highscores(highscores, health, your_time, character_name):
     """Function adds new score to the highscore list.
 
     Args:
@@ -655,12 +655,11 @@ def add_to_highscores(highscores, health, your_time):
         highscores (list): list of high scores with new score added
     """
 
-    name = '{:10s}'.format(input('What\'s your name? '))
     date = str(datetime.date.today())
     minutes = your_time // 60
     seconds = your_time % 60
     time = '{:3d}:{:02d}'.format(minutes, seconds)
-    score = [name, time, '{:5d}'.format(health), date]
+    score = [character_name, time, '{:5d}'.format(health), date]
     highscores.append(score)
     return highscores
 
@@ -695,7 +694,7 @@ def export_highscores(highscores, health, your_time, filename='highscores.txt'):
         highscores (list): list of high scores
     """
 
-    highscores = add_to_highscores(highscores, health, your_time)
+    highscores = add_to_highscores(highscores, health, your_time, character_name)
     highscores = sort_highscores(highscores)
     with open(filename, 'w') as highscores_file:  # save modified high scores into the file
         for item in highscores:
