@@ -669,7 +669,7 @@ def add_to_highscores(highscores, health, your_time, character_name):
     minutes = your_time // 60
     seconds = your_time % 60
     time = '{:3d}:{:02d}'.format(minutes, seconds)
-    score = [character_name, time, '{:5d}'.format(health), date]
+    score = ['{:10s}'.format(character_name), time, '{:5d}'.format(health), date]
     highscores.append(score)
     return highscores
 
@@ -691,7 +691,7 @@ def sort_highscores(highscores):
     return highscores
 
 
-def export_highscores(highscores, health, your_time, filename='highscores.txt'):
+def export_highscores(highscores, health, your_time, character_name, filename='highscores.txt'):
     """Function exports highscores list to the .txt file after modification.
 
     Args:
@@ -728,7 +728,7 @@ def print_highscores(highscores):
         print(' | '.join(item))
 
 
-def menage_highscores(game_won, health, your_time):
+def menage_highscores(game_won, health, your_time, character_name):
     """Function calls other high scores functions depending on the user's win or loss.
 
     Args:
@@ -741,7 +741,7 @@ def menage_highscores(game_won, health, your_time):
         print_highscores(highscores)
     else:
         highscores = import_highscores()
-        highscores = export_highscores(highscores, health, your_time)
+        highscores = export_highscores(highscores, health, your_time, character_name)
         print_highscores(highscores)
 
 
@@ -784,7 +784,7 @@ def main():
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     print_end_image(game_won)
-    menage_highscores(game_won, health, your_time)
+    menage_highscores(game_won, health, your_time, character_name)
 
 
 if __name__ == '__main__':
