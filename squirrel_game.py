@@ -590,19 +590,22 @@ def print_end_image(game_won):
         game_won (bool): shows whether a player has won or not
     """
 
+    color = ['\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m']
+    reset_color = '\033[0m'
+
     with open('end_images.txt', 'r') as img_file:
         images = img_file.read().split('***\n')
         if not game_won:
             for i in range(5):
                 for image_nr in range(3):
                     os.system('clear')
-                    print(images[image_nr])
+                    print(random.choice(color) + images[image_nr] + reset_color)
                     time.sleep(0.2)
         else:
             for i in range(5):
                 for image_nr in range(3, 6):
                     os.system('clear')
-                    print(images[image_nr])
+                    print(random.choice(color) + images[image_nr] + reset_color)
                     time.sleep(0.2)
 
 
