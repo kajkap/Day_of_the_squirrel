@@ -142,7 +142,7 @@ def getch():
     return ch
 
 
-def user_control(board, x_player, y_player, button_pressed):
+def user_control(board, x_player, y_player, button_pressed, inventory):
     """Function controls user position on the board based on the button pressed by user.
         Movent towards the obstacle ('X') is forbidden.
 
@@ -164,13 +164,23 @@ def user_control(board, x_player, y_player, button_pressed):
     place_on_up_side = board[y_player - 1][x_player]
     place_on_down_side = board[y_player + 1][x_player]
 
-    if button_pressed == 'd' and place_on_right_side not in ['X', red + '#' + reset_color]:
+    if button_pressed == 'd' and place_on_right_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
         x_player += 1
-    elif button_pressed == 'a' and place_on_left_side not in ['X', red + '#' + reset_color]:
+    elif button_pressed == 'a' and place_on_left_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
         x_player -= 1
-    elif button_pressed == 'w' and place_on_up_side not in ['X', red + '#' + reset_color]:
+    elif button_pressed == 'w' and place_on_up_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬' '☀', '☀']:
         y_player -= 1
-    elif button_pressed == 's' and place_on_down_side not in ['X', red + '#' + reset_color]:
+    elif button_pressed == 's' and place_on_down_side not in ['X', red + '#' + reset_color, '☹', '☃', '♞', '☻', '☬', '☀']:
+        y_player += 1
+
+    #  conditions for level 4 (feeding friends)
+    if button_pressed == 'd' and place_on_right_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+        x_player += 1
+    elif button_pressed == 'a' and place_on_left_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+        x_player -= 1
+    elif button_pressed == 'w' and place_on_up_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
+        y_player -= 1
+    elif button_pressed == 's' and place_on_down_side in ['☹', '☃', '♞', '☻', '☬'] and inventory['●'] > 19:
         y_player += 1
     return x_player, y_player
 
@@ -225,7 +235,7 @@ def insert_food(board, level):
     elif level == 3:
         food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10}
     elif level == 2:
-        food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10}
+        food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10, '☀': 6}
     else:
         food = {'●': 20, '⚛': 5, '✿': 20, '✡': 2, '♦': 10}
 
@@ -289,7 +299,7 @@ def insert_friends_and_hamster(board, level):
         board (list): list of board rows (list) after friends and hamster insertion
     """
 
-    friends = ['🦆', '🦊', '🐰', '🐥', '🐻']
+    friends = ['☹', '☃', '♞', '☻', '☬']
     if level == 4:
         board[24][113] = '🐹'
         lines = 37
@@ -738,7 +748,7 @@ def menage_highscores(game_won, health, your_time):
 def main():
     #  intro()
     character_name, character_color = create_player()
-    level = 0
+    level = 3
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
@@ -755,7 +765,7 @@ def main():
         board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
-        x_player, y_player = user_control(board, x_player, y_player, button_pressed)
+        x_player, y_player = user_control(board, x_player, y_player, button_pressed, inventory)
         # checks if user encounters an obstacle and lowers user health
         health = check_obstacle_contact(board, x_player, y_player, button_pressed, health)
         # changes user inventory and health if user collected special items
@@ -765,7 +775,8 @@ def main():
         # checks if user encounters an enemy and chenges user properties if it has happened
         x_player, y_player, health = minion_encounter(x_player, y_player, minions_location, health)
         # checks enemy's energy, removes his protection and defeats him if the user is on his position
-        board, hamster_energy, your_time = evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_time)
+        board, hamster_energy, your_time = evil_hamster_defeat(
+            board, x_player, y_player, level, hamster_energy, start_time)
         # checks if level end conditions were met
         next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy)
         if next_level:
