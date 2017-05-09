@@ -238,12 +238,12 @@ def insert_food(board, level):
 
     item_colors = {
         '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m',
-        '♦': '\033[32m', 'ᴥ': '\033[31m', '☀': '\033[33m'}
+        '♦': '\033[32m', 'ᴥ': '\033[31m', '☀': '\033[33m', '℥': '\033[32m'}
     reset_color = '\033[0m'
     if level == 1:
         food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
     elif level == 3:
-        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10}
+        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10, '℥': 4}
     elif level == 2:
         food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10, '☀': 6}
     else:
@@ -417,7 +417,7 @@ def enable_level_exit(board, level, inventory, lamps_lit):
     red = '\033[31m'
     reset_color = '\033[0m'
     if (level == 1 and inventory['●'] > 59) or (level == 2 and inventory['●'] > 59 and lamps_lit == 6) or (
-            level == 3 and inventory['●'] > 59):
+            level == 3 and inventory['●'] > 59 and inventory['℥'] == 4):
         for lines in range(37, 39):
             for columnes in range(116, 119):
                 if board[lines][columnes] == red + '#' + reset_color:
@@ -441,7 +441,7 @@ def collecting_food(board, x_player, y_player, inventory, health):
         health (int): player's health points
     """
 
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', '℥': '\033[32m'}
     reset_color = '\033[0m'
     if board[y_player][x_player] == item_colors['●'] + '●' + reset_color:
         inventory['●'] += 1
@@ -453,8 +453,8 @@ def collecting_food(board, x_player, y_player, inventory, health):
         health += 5
     elif board[y_player][x_player] == item_colors['✿'] + '✿' + reset_color:
         health -= 5
-    print(inventory)
-
+    elif board[y_player][x_player] == item_colors['℥'] + '℥' + reset_color:
+        inventory['℥'] += 1
     return inventory, health
 
 
@@ -518,7 +518,6 @@ def move_minions(board, minions_location, character_color):
 
 
 def update_board_information(board, level, character_name, health, inventory, start_time):
-    # food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
     item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
     reset_color = '\033[0m'
     end_time = time.time()
@@ -590,7 +589,8 @@ def setting_next_level(level):
     y_player = 1    # player's initial vertical position
     level += 1
     inventory = {'●': 0, '♦': 0}
-
+    if level == 3:
+        inventory['℥'] = 0
     if level == 5:
         game_won = True
         board = []
@@ -847,7 +847,7 @@ def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
 def main():
     #  intro()
     character_name, character_color = create_player()
-    level = 3
+    level = 2
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 

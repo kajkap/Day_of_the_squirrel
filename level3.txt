@@ -17,7 +17,7 @@ X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXX   XXXXX   X   XXXXX   X   X   X   
 X   X           X       X       X               X           X       X   X   X       X       X       X   X   X   X   X  X # : thorny bush
 X   X           X       X       X               X           X       X   X   X       X       X       X   X   X   X   X  X ᴥ : evil minion
 X   XXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXXXXXX   XXXXX   X   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   X   XXXXX   X   X  X ⇵ : passage to the next level
-X   X       X   X               X       X       X       X               X           X   X           X           X   X  X
+X   X       X   X               X       X       X       X               X           X   X           X           X   X  X ℥ : shard of the key
 X   X       X   X               X       X       X       X               X           X   X           X           X   X  X
 X   X   X   X   XXXXX   XXXXXXXXXXXXX   X   X   XXXXX   XXXXX   XXXXXXXXXXXXXXXXX   X   X   XXXXXXXXXXXXXXXXXXXXX   X  X
 X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X
