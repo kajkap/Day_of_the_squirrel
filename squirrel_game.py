@@ -878,6 +878,48 @@ def print_level_title(number):
     time.sleep(5)
 
 
+def insert_text_into_board(y, x, text, board):
+    for i in range(len(text)):
+        board[y][x+i] = text[i]
+    return board
+
+
+def prepare_board_to_print(inventory, board):
+    inventory_info = {
+        '●': ('nut', 'food', 0.1), '☯': ('legendary cookie', 'treasure', 0.5),
+        '☂': ('ancient umbrella', 'treasure', 0.5), '♫': ('magic note', 'treasure', 0.5),
+        '℥': ('key shard', 'tool', 0.25)}
+
+    board = insert_text_into_board(3, 3, 'Kasie Perkowska and Maciej Nowak present:', board)
+    board = insert_text_into_board(4, 3, 'The Day Of The Squirrel', board)
+
+    table_title = ('Item'.rjust(4) + 'Name'.rjust(22) + 'Type'.rjust(10)
+                   + 'Weight'.rjust(8) + 'Amount'.rjust(8))
+    board = insert_text_into_board(7, 3, 'Inventory', board)
+    board = insert_text_into_board(8, 3, table_title, board)
+    board = insert_text_into_board(9, 3, '_' * 60, board)
+
+    total_weight = 0
+    line_nr = 10
+    for key in inventory:
+        line_to_print = (key.rjust(4) + inventory_info[key][0].rjust(22) + inventory_info[key][1].rjust(10)
+                         + str(inventory_info[key][2]).rjust(8) + str(inventory[key]).rjust(8))
+        board = insert_text_into_board(line_nr, 3, line_to_print, board)
+        line_nr += 2
+        total_weight += inventory[key] * inventory_info[key][2]
+    board = insert_text_into_board(line_nr - 1, 3, '_' * 60, board)
+    board = insert_text_into_board(line_nr, 3, 'Your inventory total weight: ' + str(total_weight), board)
+    return board
+
+
+def print_additional_game_info(inventory):
+    info_table = create_board(120, 40)
+    os.system('clear')
+    info_table = prepare_board_to_print(inventory, info_table)
+    print_board(info_table)
+    input('Press ENTER to return to the game.')
+
+
 def main():
     intro()
     character_name, character_color = create_player()
@@ -899,9 +941,10 @@ def main():
         # update text info on board
         board = update_board_information(board, level, character_name, health, inventory, start_time, hamster_energy)
         manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
-        print(inventory)
         board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
+        if button_pressed == 'i':
+            print_additional_game_info(inventory)
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed, inventory)
         # lights magic lamps in contact with user

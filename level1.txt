@@ -5,7 +5,7 @@ X        XXX                                                                    
 X       Xo##X                                ###                                           #           XXX             X
 X     XX###o#XX                                                                    X                    X              X Inventory:
 X    Xo#\#X#/##X                                                        X         X                    X$X             X .
-X     X##\X/#oX                                           X              XX     XX                    X\$$X            X Total treasures :  
+X     X##\X/#oX                                           X              XX     XX                    X\$$X            X Total treasures :
 X      XX}X{XX                               X           X                XXX  XX                   XXi$$\$XX          X
 X        XXX                                  X         X                   XXX;X                     X$$@X            X
 X        XXX                          X        XX     XX           XX       X%XX    XX               X\$$$iXX          X Legend:
