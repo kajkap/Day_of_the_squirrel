@@ -56,7 +56,7 @@ def loading_level(level_nr):
 
     item_colors = {
         '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m',
-        '#': '\033[31m'}
+        '#': '\033[31m', '℥': '\033[32m'}
     reset_color = '\033[0m'
 
     level_file = open('level' + level_nr + '.txt')
