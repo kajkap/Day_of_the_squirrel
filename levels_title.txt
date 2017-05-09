@@ -1,0 +1,245 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                             __       ___________    ____  _______  __          __                                   X
+X                            |  |     |   ____\   \  /   / |   ____||  |        /_ |                                  X
+X                            |  |     |  |__   \   \/   /  |  |__   |  |         | |                                  X
+X                            |  |     |   __|   \      /   |   __|  |  |         | |                                  X
+X                            |  `----.|  |____   \    /    |  |____ |  `----.    | |                                  X
+X                            |_______||_______|   \__/     |_______||_______|    |_|                                  X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X         .___________. __    __   _______     _______   ______   .______       _______     _______.___________.      X
+X         |           ||  |  |  | |   ____|   |   ____| /  __  \  |   _  \     |   ____|   /       |           |      X
+X         `---|  |----`|  |__|  | |  |__      |  |__   |  |  |  | |  |_)  |    |  |__     |   (----`---|  |----`      X
+X             |  |     |   __   | |   __|     |   __|  |  |  |  | |      /     |   __|     \   \       |  |           X
+X             |  |     |  |  |  | |  |____    |  |     |  `--'  | |  |\  \----.|  |____.----)   |      |  |           X
+X             |__|     |__|  |__| |_______|   |__|      \______/  | _| `._____||_______|_______/       |__|           X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                             __       ___________    ____  _______  __           ___                                 X
+X                            |  |     |   ____\   \  /   / |   ____||  |         |__ \                                X
+X                            |  |     |  |__   \   \/   /  |  |__   |  |            ) |                               X
+X                            |  |     |   __|   \      /   |   __|  |  |           / /                                X
+X                            |  `----.|  |____   \    /    |  |____ |  `----.     / /_                                X
+X                            |_______||_______|   \__/     |_______||_______|    |____|                               X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X        .______    __    ______ .__   __.  __    ______      _______  __          ___       _______   _______        X
+X        |   _  \  |  |  /      ||  \ |  | |  |  /      |    /  _____||  |        /   \     |       \ |   ____|       X
+X        |  |_)  | |  | |  ,----'|   \|  | |  | |  ,----'   |  |  __  |  |       /  ^  \    |  .--.  |+  |__          X
+X        |   ___/  |  | |  |     |  . `  | |  | |  |        |  | |_ | |  |      /  /_\  \   |  |  |  ||   __|         X
+X        |  |      |  | |  `----.|  |\   | |  | |  `----.   |  |__| | |  `----./  _____  \  |  '--'  |+  |____        X
+X        | _|      |__|  \______||__| \__| |__|  \______|    \______| |_______/__/     \__\ |_______/ |_______|       X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                             __       ___________    ____  _______  __           ____                                X
+X                            |  |     |   ____\   \  /   / |   ____||  |         |___ \                               X
+X                            |  |     |  |__   \   \/   /  |  |__   |  |           __) |                              X
+X                            |  |     |   __|   \      /   |   __|  |  |          |__ <                               X
+X                            |  `----.|  |____   \    /    |  |____ |  `----.     ___) |                              X
+X                            |_______||_______|   \__/     |_______||_______|    |____/                               X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                   .___  ___.      ___      ________   _______                                       X
+X                                   |   \/   |     /   \    |       /  |   ____|                                      X
+X                                   |  \  /  |    /  ^  \   `---/  /   |  |__                                         X
+X                                   |  |\/|  |   /  /_\  \     /  /    |   __|                                        X
+X                                   |  |  |  |  /  _____  \   /  /----.|  |____                                       X
+X                                   |__|  |__| /__/     \__\ /________||_______|                                      X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                             __       ___________    ____  _______  __          _  _                                 X
+X                            |  |     |   ____\   \  /   / |   ____||  |        | || |                                X
+X                            |  |     |  |__   \   \/   /  |  |__   |  |        | || |_                               X
+X                            |  |     |   __|   \      /   |   __|  |  |        |__   _|                              X
+X                            |  `----.|  |____   \    /    |  |____ |  `----.      | |                                X
+X                            |_______||_______|   \__/     |_______||_______|      |_|                                X
+X                                                                                                                     X
+X                                                                                                                     X
+X                           ___      .__   __.   ______  __   _______ .__   __. .___________.                         X
+X                          /   \     |  \ |  |  /      ||  | |   ____||  \ |  | |           |                         X
+X                         /  ^  \    |   \|  | |  ,----'|  | |  |__   |   \|  | `---|  |----`                         X
+X                        /  /_\  \   |  . `  | |  |     |  | |   __|  |  . `  |     |  |                              X
+X                       /  _____  \  |  |\   | |  `----.|  | |  |____ |  |\   |     |  |                              X
+X                      /__/     \__\ |__| \__|  \______||__| |_______||__| \__|     |__|                              X
+X                                                                                                                     X
+X                                                                                                                     X
+X                          .______   .______       __       _______.  ______   .__   __.                              X
+X                          |   _  \  |   _  \     |  |     /       | /  __  \  |  \ |  |                              X
+X                          |  |_)  | |  |_)  |    |  |    |   (----`|  |  |  | |   \|  |                              X
+X                          |   ___/  |      /     |  |     \   \    |  |  |  | |  . `  |                              X
+X                          |  |      |  |\  \----.|  | .----)   |   |  `--'  | |  |\   |                              X
+X                          | _|      | _| `._____||__| |_______/     \______/  |__| \__|                              X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X       .______     ______   .__   __.  __    __       _______.     _______      ___      .___  ___.  _______         X
+X       |   _  \   /  __  \  |  \ |  | |  |  |  |     /       |    /  _____|    /   \     |   \/   | |   ____|        X
+X       |  |_)  | |  |  |  | |   \|  | |  |  |  |    |   (----`   |  |  __     /  ^  \    |  \  /  | |  |__           X
+X       |   _  <  |  |  |  | |  . `  | |  |  |  |     \   \       |  | |_ |   /  /_\  \   |  |\/|  | |   __|          X
+X       |  |_)  | |  `--'  | |  |\   | |  `--'  | .----)   |      |  |__| |  /  _____  \  |  |  |  | |  |____         X
+X       |______/   \______/  |__| \__|  \______/  |_______/        \______| /__/     \__\ |__|  |__| |_______|        X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+***
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                     _______  __  .__   __.      ___       __                                        X
+X                                    |   ____||  | |  \ |  |     /   \     |  |                                       X
+X                                    |  |__   |  | |   \|  |    /  ^  \    |  |                                       X
+X                                    |   __|  |  | |  . `  |   /  /_\  \   |  |                                       X
+X                                    |  |     |  | |  |\   |  /  _____  \  |  `----.                                  X
+X                                    |__|     |__| |__| \__| /__/     \__\ |_______|                                  X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                           .______        ___   .___________.___________. __       _______                           X
+X                           |   _  \      /   \  |           |           ||  |     |   ____|                          X
+X                           |  |_)  |    /  ^  \ `---|  |----`---|  |----`|  |     |  |__                             X
+X                           |   _  <    /  /_\  \    |  |        |  |     |  |     |   __|                            X
+X                           |  |_)  |  /  _____  \   |  |        |  |     |  `----.|  |____                           X
+X                           |______/  /__/     \__\  |__|        |__|     |_______||_______|                          X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+X                                                                                                                     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

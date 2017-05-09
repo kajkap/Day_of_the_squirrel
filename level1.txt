@@ -42,4 +42,4 @@ Story plot:
 You woke up one day and realized that all your friends disappeared and you are alone in your forest. You have to find your
 friends but first you have to collect enough food for the journey.
 
-Goal: Collect 60 nuts to move to the next level.
+Goal: Collect 60 nuts to move to open the passage to the next level.

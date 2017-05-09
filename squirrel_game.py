@@ -398,6 +398,7 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
     win = False
     if level == 4:
         if y_player in range(20, 29) and x_player in range(100, 118):
+            print_level_title(5)
             win = hotcoldgame.main()
             x_player = 1
             y_player = 1
@@ -853,8 +854,23 @@ def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
     return board, lamps_lit
 
 
+def print_level_title(number):
+    """Function displays level title"""
+
+    color = ['\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m']
+    reset_color = '\033[0m'
+
+    img_file = open('levels_title.txt')
+    images = img_file.read().split('***\n')
+    img_file.close()
+
+    os.system('clear')
+    print(color[0] + images[number] + reset_color)
+    time.sleep(5)
+
+
 def main():
-    intro()
+    # intro()
     character_name, character_color = create_player()
     level = 0
     # sets parameters of next game level
@@ -866,6 +882,8 @@ def main():
     hamster_energy = 600
     game_won = False
     start_time = time.time()
+
+    print_level_title(level - 1)
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         # update text info on board
@@ -894,6 +912,8 @@ def main():
         next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy, board)
         if next_level:
             # sets parameters of next game level
+            if level in [1, 2, 3, 4]:
+                print_level_title(level - 1)
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
     print_end_image(game_won)
