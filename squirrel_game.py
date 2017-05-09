@@ -620,7 +620,7 @@ def intro():
     color = ['\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m']
     reset_color = '\033[0m'
 
-    img_file = open('end_images.txt')
+    img_file = open('intro.txt')
     images = img_file.read().split('***\n')
     img_file.close()
 
@@ -631,11 +631,11 @@ def intro():
         for i in range(len(image)):
             image[i] = random.choice(color) + image[i] + reset_color
 
-        for i in range(2, len(image)):
+        for i in range(len(image)):
             os.system('clear')
             for j in range(i+1):
                 print(image[j])
-            time.sleep(0.05)
+            time.sleep(0.1)
 
         input('Press ENTER to continue')
 
@@ -644,9 +644,7 @@ def intro():
             image[i] = ' '
             for j in range(len(image)):
                 print(image[j])
-            time.sleep(0.05)
-
-        input('Press ENTER to continue')
+            time.sleep(0.1)
 
 
 def print_end_image(game_won):
@@ -853,9 +851,9 @@ def light_magic_lamps(board, x_player, y_player, button_pressed, lamps_lit):
 
 
 def main():
-    #  intro()
+    intro()
     character_name, character_color = create_player()
-    level = 2
+    level = 0
     # sets parameters of next game level
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
 
