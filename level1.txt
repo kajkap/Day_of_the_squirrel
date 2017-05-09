@@ -28,7 +28,7 @@ X      XXX%&%&XXXX@@@@/@@@@XXXX888\88/8X      #           X@@@o%::X             
 X     X%&\%&&%&&%,@@@\@@@/@@X88\88888/8X       #          X@@@o%::X                 XXOB69QO8PdUOpXgoO9XX              X a : left
 X     X&&%&%&/%&&%@@\@@/./@@@88888\8888X                 X%@@(o)::X                XXXXXbU8OU.qOp.qOdoUOdXX            X d : right
 X     X&&%//%&%%&&@@\.V./@@'.`88\8.`/XX                  X%@@@@%::X                     XXuU../p.u.gcoXXXXX            X \ : exit
-X      XXX.`./%&'....|.|........\.'|X                    X%@@@@%::;X                      XX\//../dXXXX                X
+X      XXX.`./%&'....|.|........\.'|X                    X%@@@@%::;X                      XX\//../dXXXX                X i : info screen
 X         Xo|........|.|.........|.X                    X%@@@@%%:;;;X                       X\\///X                    X
 X         X.|........|.|.........|.X                XXXXXXXXXXXXXXXXXXXX                     X-|/X                     X
 X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                                 X||\X                     X

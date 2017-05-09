@@ -5,7 +5,7 @@ X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.
 X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*******’.’.’.*******.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*******.’.’.’.’.’.’.’X Boss energy: Ⓔ
 X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.|.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’X Inventory:
 X     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .
-X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Total treasures :  
+X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Total treasures :
 X       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Legend:
@@ -27,7 +27,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXX                                                       
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #  ***%***%*%***%*** X a : left
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #  ********&******** X d : right
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #   ******_I_******  X \ : exit
-XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #####################X
+XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #####################X i : info screen
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                                              X

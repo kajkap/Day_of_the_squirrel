@@ -5,7 +5,7 @@ X   XXXXX   X   XXXXX   X   XXXXXXXXX   XXXXXXXXXXXXXXXXX   X   X   X   X   XXXX
 X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X
 X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X Inventory:
 XXXXXXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXX   X   X   XXXXX   X   X   X   X   X   XXXXX   XXXXXXXXX   X   X   X   X  X .
-X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X Total treasures :  
+X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X Total treasures :
 X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X
 X   X   X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X   X   XXXXX   X  X
 X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X Legend:
@@ -29,7 +29,7 @@ X   XXXXX   XXXXXXXXX   X   X   XXXXXXXXX   X   XXXXX   X   XXXXX   X   XXXXX   
 X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X a : left
 X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X d : right
 XXXXXXXXX   X   X   X   XXXXX   X   XXXXXXXXX   X   XXXXXXXXXXXXXXXXX   X   X   X   X   X   X   XXXXXXXXX   X   XXXXX  X \ : exit
-X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
+X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X i : info screen
 X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
 X   X   X   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXXXXXX   XXXXX   X   X   XXXXXXXXX   XXXXXXXXXXXXX   X  X
 X   X       X   X   X       X       X   X   X           X               X       X   X   X       X           X          X

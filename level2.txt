@@ -5,7 +5,7 @@ X                                                                XXXXXXX        
 X                                                               XMMMMMMNX         XX                                   X
 X                                                            XXXMMMMMMMMhXX      XmMX                                  X Inventory:
 X                                                          XXXMMMMMMMMMMMMNXX   XmMMMX                                 X .
-X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X Total treasures :  
+X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X Total treasures :
 X            XXXXXX                                        XMMMMMMMMMMMMMMMMMXXNMMMMMMMX                    X..X       X
 X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X
 X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X Legend:
@@ -28,7 +28,7 @@ X                       XXXo:mMMMMMXXXXXXX                       X      X       
 X                     XXXXXdMMMMMMMMXX                                                           XXXXXXXX              X a : left
 X                         XNMMMMMmXXXXXXXX                                                        XXXXXX               X d : right
 X                     XXXXXXXXXXXXXXXX                                                             XXXX                X \ : exit
-X         XXXXXX               XXX                                                                X    X               X
+X         XXXXXX               XXX                                                                X    X               X i : info screen
 X          X..X                XXX                                                               X      X              X
 X       XXXXXXXXXX             XXX                                                                                     X
 X         X    X                                                                                                       X
