@@ -5,11 +5,11 @@ X                                                                XXXXXXX        
 X                                                               XMMMMMMNX         XX                                   X
 X                                                            XXXMMMMMMMMhXX      XmMX                                  X Inventory:
 X                                                          XXXMMMMMMMMMMMMNXX   XmMMMX                                 X .
-X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X .
+X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X Total treasures :  
 X            XXXXXX                                        XMMMMMMMMMMMMMMMMMXXNMMMMMMMX                    X..X       X
-X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X Legend:
-X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X ● : nut
-X           X      X                                   XNMMMMMMMMMMMMMMMMMm/.dMMMMMMMMMMMX                             X ♦ : hidden treasures
+X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X
+X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X Legend:
+X           X      X                                   XNMMMMMMMMMMMMMMMMMm/.dMMMMMMMMMMMX                             X ● : nut
 X                                                      XMMMMMMMMMMMMMMMMMMd-yMMMMMMMMMMMMNX                            X ⚛ : bag full of nuts
 X                                                      XXMMMMMMMMNMMMMNMMN+`sMMMMMMMMMMMMNX                            X ✡ : first aid
 X                                                       XXXMMMNXXXXMMXXXXXXXXXXXXXXXXXXXXXXX                           X ✿ : rotten food
@@ -17,17 +17,17 @@ X                                                         XXXXXX  XMMX          
 X                                                                 XMMX           XMX                                   X # : thorny bush
 X                                                                 XMMX           XMX                                   X ᴥ : evil minion
 X                                                                 XXXX           XXX              XXXXXX               X ⇵ : passage to the next level
-X                             XXX                                                                  X..X                X
-X                           XMMXXXX                                                             XXXXXXXXXX             X
-X                          XXMMMMMMXX                                                            X      X              X
-X                           XMMMMMmNMXX                                                                                X
-X                        XXXmMMMMMdXXoXX                          XXXXXX                                               X Controls:
-X                       XXXXMMMMMMMNsX                             X..X                                                X w : up
-X                         XhMNdMMMMmdXXXX                       XXXXXXXXXX                                             X s : down
-X                       XXXo:mMMMMMXXXXXXX                       X      X                                              X a : left
-X                     XXXXXdMMMMMMMMXX                                                           XXXXXXXX              X d : right
-X                         XNMMMMMmXXXXXXXX                                                        XXXXXX               X \ : exit
-X                     XXXXXXXXXXXXXXXX                                                             XXXX                X
+X                             XXX                                                                  X..X                X Treasures:
+X                           XMMXXXX                                                             XXXXXXXXXX             X ☯ : legendary cookie
+X                          XXMMMMMMXX                                                            X      X              X ☂ : ancient umbrella
+X                           XMMMMMmNMXX                                                                                X ♫ : magic note
+X                        XXXmMMMMMdXXoXX                          XXXXXX                                               X
+X                       XXXXMMMMMMMNsX                             X..X                                                X Controls:
+X                         XhMNdMMMMmdXXXX                       XXXXXXXXXX                                             X w : up
+X                       XXXo:mMMMMMXXXXXXX                       X      X                                              X s : down
+X                     XXXXXdMMMMMMMMXX                                                           XXXXXXXX              X a : left
+X                         XNMMMMMmXXXXXXXX                                                        XXXXXX               X d : right
+X                     XXXXXXXXXXXXXXXX                                                             XXXX                X \ : exit
 X         XXXXXX               XXX                                                                X    X               X
 X          X..X                XXX                                                               X      X              X
 X       XXXXXXXXXX             XXX                                                                                     X

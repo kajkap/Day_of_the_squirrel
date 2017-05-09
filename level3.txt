@@ -5,11 +5,11 @@ X   XXXXX   X   XXXXX   X   XXXXXXXXX   XXXXXXXXXXXXXXXXX   X   X   X   X   XXXX
 X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X
 X       X       X       X       X   X           X       X       X   X   X   X   X   X   X       X       X   X   X   X  X Inventory:
 XXXXXXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXX   X   X   XXXXX   X   X   X   X   X   XXXXX   XXXXXXXXX   X   X   X   X  X .
-X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X .
+X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X Total treasures :  
 X   X       X       X           X               X   X       X       X   X   X   X   X               X   X   X   X   X  X
-X   X   X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X   X   XXXXX   X  X Legend:
+X   X   X   X   XXXXX   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   XXXXX   XXXXX   X   X   X   X   XXXXX   X   X   XXXXX   X  X
+X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X Legend:
 X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X ● : nut
-X   X   X   X   X           X   X   X       X       X   X       X       X       X   X   X   X       X   X       X   X  X ♦ : hidden treasures
 X   X   X   X   XXXXXXXXX   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXX   XXXXX   X   X   XXXXXXXXX   X   X  X ⚛ : bag full of nuts
 X       X   X           X   X   X       X           X   X   X       X   X       X       X   X   X       X           X  X ✡ : first aid
 X       X   X           X   X   X       X           X   X   X       X   X       X       X   X   X       X           X  X ✿ : rotten food
@@ -18,17 +18,17 @@ X   X           X       X       X               X           X       X   X   X   
 X   X           X       X       X               X           X       X   X   X       X       X       X   X   X   X   X  X ᴥ : evil minion
 X   XXXXXXXXXXXXX   XXXXXXXXX   X   XXXXXXXXXXXXX   XXXXX   X   XXXXX   X   XXXXXXXXXXXXXXXXXXXXX   X   XXXXX   X   X  X ⇵ : passage to the next level
 X   X       X   X               X       X       X       X               X           X   X           X           X   X  X ℥ : shard of the key
-X   X       X   X               X       X       X       X               X           X   X           X           X   X  X
-X   X   X   X   XXXXX   XXXXXXXXXXXXX   X   X   XXXXX   XXXXX   XXXXXXXXXXXXXXXXX   X   X   XXXXXXXXXXXXXXXXXXXXX   X  X
-X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X
-X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X Controls:
-X   X   XXXXX   X   XXXXXXXXXXXXX   X   X   XXXXX   X   X   X   X   X   X   XXXXX   XXXXXXXXX   XXXXX   X   XXXXXXXXX  X w : up
-X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X s : down
-X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X a : left
-X   XXXXX   XXXXXXXXX   X   X   XXXXXXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   X   X   X   XXXXX   X  X d : right
-X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X \ : exit
-X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X
-XXXXXXXXX   X   X   X   XXXXX   X   XXXXXXXXX   X   XXXXXXXXXXXXXXXXX   X   X   X   X   X   X   XXXXXXXXX   X   XXXXX  X
+X   X       X   X               X       X       X       X               X           X   X           X           X   X  X Treasures:
+X   X   X   X   XXXXX   XXXXXXXXXXXXX   X   X   XXXXX   XXXXX   XXXXXXXXXXXXXXXXX   X   X   XXXXXXXXXXXXXXXXXXXXX   X  X ☯ : legendary cookie
+X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X ☂ : ancient umbrella
+X   X   X       X       X           X   X   X       X   X   X   X               X   X       X           X           X  X ♫ : magic note
+X   X   XXXXX   X   XXXXXXXXXXXXX   X   X   XXXXX   X   X   X   X   X   X   XXXXX   XXXXXXXXX   XXXXX   X   XXXXXXXXX  X
+X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X Controls:
+X   X   X       X       X       X       X   X       X   X       X   X   X       X   X       X   X   X   X           X  X w : up
+X   XXXXX   XXXXXXXXX   X   X   XXXXXXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   XXXXX   X   X   X   X   XXXXX   X  X s : down
+X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X a : left
+X           X       X   X   X   X           X   X       X           X   X   X   X       X   X   X       X   X       X  X d : right
+XXXXXXXXX   X   X   X   XXXXX   X   XXXXXXXXX   X   XXXXXXXXXXXXXXXXX   X   X   X   X   X   X   XXXXXXXXX   X   XXXXX  X \ : exit
 X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
 X       X   X   X   X   X       X   X               X   X           X   X       X   X   X                   X       X  X
 X   X   X   X   X   X   X   XXXXX   X   XXXXX   XXXXX   X   XXXXXXXXX   XXXXX   X   X   XXXXXXXXX   XXXXXXXXXXXXX   X  X

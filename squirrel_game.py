@@ -56,8 +56,8 @@ def loading_level(level_nr):
     """
 
     item_colors = {
-        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', 'ᴥ': '\033[31m',
-        '#': '\033[31m', '℥': '\033[32m'}
+        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', 'ᴥ': '\033[31m',
+        '#': '\033[31m', '℥': '\033[32m', '☯': '\033[32m', '☂': '\033[32m', '♫': '\033[32m'}
     reset_color = '\033[0m'
 
     level_file = open('level' + level_nr + '.txt')
@@ -239,16 +239,16 @@ def insert_food(board, level):
 
     item_colors = {
         '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m',
-        '♦': '\033[32m', 'ᴥ': '\033[31m', '☀': '\033[33m', '℥': '\033[32m'}
+        'ᴥ': '\033[31m', '☀': '\033[33m', '℥': '\033[32m', '☯': '\033[32m', '☂': '\033[32m', '♫': '\033[32m'}
     reset_color = '\033[0m'
     if level == 1:
-        food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '♦': 10}
+        food = {'●': 20, '⚛': 8, '✿': 5, '✡': 8, '☯': 3, '☂': 3, '♫': 3}
     elif level == 3:
-        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '♦': 10, '℥': 4}
+        food = {'●': 20, '⚛': 6, '✿': 10, '✡': 6, '℥': 4, '☯': 3, '☂': 3, '♫': 3}
     elif level == 2:
-        food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '♦': 10, '☀': 6}
+        food = {'●': 20, '⚛': 4, '✿': 15, '✡': 4, '☀': 6, '☯': 3, '☂': 3, '♫': 3}
     else:
-        food = {'●': 20, '⚛': 5, '✿': 20, '✡': 2, '♦': 10}
+        food = {'●': 20, '⚛': 5, '✿': 20, '✡': 2, '☯': 3, '☂': 3, '♫': 3}
 
     for key in food:
         for i in range(food[key]):
@@ -276,7 +276,7 @@ def insert_minions(board, level):
 
     item_colors = {'ᴥ': '\033[31m'}
     reset_color = '\033[0m'
-    if level == 1:
+    if level == 4:
         minions = {'ᴥ': 5}
     elif level == 2:
         minions = {'ᴥ': 5}
@@ -451,12 +451,18 @@ def collecting_food(board, x_player, y_player, inventory, health):
         health (int): player's health points
     """
 
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m', '℥': '\033[32m'}
+    item_colors = {
+        '●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '℥': '\033[32m', '☯': '\033[32m',
+        '☂': '\033[32m', '♫': '\033[32m'}
     reset_color = '\033[0m'
     if board[y_player][x_player] == item_colors['●'] + '●' + reset_color:
         inventory['●'] += 1
-    elif board[y_player][x_player] == item_colors['♦'] + '♦' + reset_color:
-        inventory['♦'] += 1
+    elif board[y_player][x_player] == item_colors['☯'] + '☯' + reset_color:
+        inventory['☯'] += 1
+    elif board[y_player][x_player] == item_colors['☂'] + '☂' + reset_color:
+        inventory['☂'] += 1
+    elif board[y_player][x_player] == item_colors['♫'] + '♫' + reset_color:
+        inventory['♫'] += 1
     elif board[y_player][x_player] == item_colors['⚛'] + '⚛' + reset_color:
         inventory['●'] += 20
     elif board[y_player][x_player] == item_colors['✡'] + '✡' + reset_color:
@@ -528,7 +534,7 @@ def move_minions(board, minions_location, character_color):
 
 
 def update_board_information(board, level, character_name, health, inventory, start_time, hamster_energy):
-    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
+    item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m'}
     reset_color = '\033[0m'
     end_time = time.time()
     your_time = int(end_time - start_time)
@@ -537,7 +543,7 @@ def update_board_information(board, level, character_name, health, inventory, st
     board[2][129] = str(health)
     board[3][127] = str(your_time)
     board[6][121] = item_colors['●'] + '●' + reset_color + ' : ' + str(inventory['●'])  # inserts nr of nuts
-    board[7][121] = item_colors['♦'] + '♦' + reset_color + ' : ' + str(inventory['♦'])  # inserts nr of treasures
+    board[7][139] = str(inventory['☯'] + inventory['☂'] + inventory['♫'])  # inserts total amount of treasures
     if level == 4:
         board[4][134] = str(hamster_energy)
     return board
@@ -581,7 +587,7 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy, boa
     return next_level
 
 
-def setting_next_level(level):
+def setting_next_level(level, inventory):
     """Function sets parameters of next game level.
 
     Args:
@@ -600,9 +606,12 @@ def setting_next_level(level):
     x_player = 1    # player's initial horizontal position
     y_player = 1    # player's initial vertical position
     level += 1
-    inventory = {'●': 0, '♦': 0}
+    if level == 1:
+        inventory = {'●': 0, '☯': 0, '☂': 0, '♫': 0}
     if level == 3:
         inventory['℥'] = 0
+    if level == 4:
+        del inventory['℥']
     if level == 5:
         game_won = True
         board = []
@@ -614,7 +623,7 @@ def setting_next_level(level):
         board = insert_friends(board, level)
         board = colour_hamster(board, level)
         game_won = False
-
+    inventory['●'] = 0
     return game_won, level, inventory, board, x_player, y_player, minions_location
 
 
@@ -870,11 +879,12 @@ def print_level_title(number):
 
 
 def main():
-    # intro()
+    intro()
     character_name, character_color = create_player()
     level = 0
     # sets parameters of next game level
-    game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
+    inventory = {}
+    game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level, inventory)
 
     button_pressed = ''
     health = 20  # player's initial health points
@@ -889,6 +899,7 @@ def main():
         # update text info on board
         board = update_board_information(board, level, character_name, health, inventory, start_time, hamster_energy)
         manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
+        print(inventory)
         board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
         # changes user position based on pressed button
@@ -913,8 +924,9 @@ def main():
         if next_level:
             # sets parameters of next game level
             if level in [1, 2, 3, 4]:
-                print_level_title(level - 1)
-            game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level)
+                print_level_title(level)
+            game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(
+                level, inventory)
 
     print_end_image(game_won)
     menage_highscores(game_won, health, your_time, character_name)
