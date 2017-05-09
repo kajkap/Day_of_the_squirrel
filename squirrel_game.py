@@ -3,6 +3,7 @@ import time
 import datetime
 import operator
 import random
+import hotcoldgame
 
 """
 black = '\033[30m'
@@ -394,10 +395,17 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
             for columnes in range(120):
                 if board[lines][columnes] == red + '#' + reset_color:
                     board[lines][columnes] = ' '
+    win = False
     if y_player in range(20, 29) and x_player in range(100, 118):
+        win = hotcoldgame.main()
+        x_player = 1
+        y_player = 1
+    if win:
         hamster_energy = 0
+
     end_time = time.time()
     your_time = int(end_time - start_time)
+
     return board, hamster_energy, your_time
 
 
@@ -453,7 +461,6 @@ def collecting_food(board, x_player, y_player, inventory, health):
         health += 5
     elif board[y_player][x_player] == item_colors['✿'] + '✿' + reset_color:
         health -= 5
-    print(inventory)
 
     return inventory, health
 
