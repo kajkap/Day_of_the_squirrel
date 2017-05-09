@@ -396,12 +396,13 @@ def evil_hamster_defeat(board, x_player, y_player, level, hamster_energy, start_
                 if board[lines][columnes] == red + '#' + reset_color:
                     board[lines][columnes] = ' '
     win = False
-    if y_player in range(20, 29) and x_player in range(100, 118):
-        win = hotcoldgame.main()
-        x_player = 1
-        y_player = 1
-    if win:
-        hamster_energy = 0
+    if level == 4:
+        if y_player in range(20, 29) and x_player in range(100, 118):
+            win = hotcoldgame.main()
+            x_player = 1
+            y_player = 1
+        if win:
+            hamster_energy = 0
 
     end_time = time.time()
     your_time = int(end_time - start_time)
@@ -525,7 +526,7 @@ def move_minions(board, minions_location, character_color):
     return board, minions_location
 
 
-def update_board_information(board, level, character_name, health, inventory, start_time):
+def update_board_information(board, level, character_name, health, inventory, start_time, hamster_energy):
     item_colors = {'●': '\033[33m', '⚛': '\033[34m', '✿': '\033[31m', '✡': '\033[94m', '♦': '\033[32m'}
     reset_color = '\033[0m'
     end_time = time.time()
@@ -536,6 +537,8 @@ def update_board_information(board, level, character_name, health, inventory, st
     board[3][127] = str(your_time)
     board[6][121] = item_colors['●'] + '●' + reset_color + ' : ' + str(inventory['●'])  # inserts nr of nuts
     board[7][121] = item_colors['♦'] + '♦' + reset_color + ' : ' + str(inventory['♦'])  # inserts nr of treasures
+    if level == 4:
+        board[4][134] = str(hamster_energy)
     return board
 
 
@@ -866,7 +869,7 @@ def main():
 
     while button_pressed != '\\' and health > 0 and not game_won:   # game end conditions
         # update text info on board
-        board = update_board_information(board, level, character_name, health, inventory, start_time)
+        board = update_board_information(board, level, character_name, health, inventory, start_time, hamster_energy)
         manage_display(board, x_player, y_player, character_color)   # creates current frame of game animation
         board, minions_location = move_minions(board, minions_location, character_color)
         button_pressed = getch()    # reads button pressed by user
