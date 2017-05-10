@@ -9,7 +9,7 @@ def initial_print():
     os.system('clear')
     print("""
     *** Add 2 numbers! ***
-     You have 10 seconds.
+     You have 15 seconds.
      """)
 
 
