@@ -1,4 +1,5 @@
 import random
+import time
 import os
 
 
@@ -31,6 +32,8 @@ def guessing():
     guess = ''
     while not guess.isdigit():
         guess = input()
+        if guess.isalpha():
+            print("Invalid input. You must guess a number!")
     guess = int(guess)
     return guess
 
@@ -50,6 +53,7 @@ def guess_check(guess, number):
         print('%d is too low' % guess)
     else:
         print('\nCongratulations! You\'ve guessed my number.')
+        time.sleep(2)
         you_win = True
     return you_win
 
@@ -61,4 +65,4 @@ def main():
     while guess != number:
         guess = guessing()
         you_win = guess_check(guess, number)
-        return you_win
+    return you_win

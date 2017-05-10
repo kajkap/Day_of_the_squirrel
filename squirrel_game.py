@@ -3,7 +3,7 @@ import time
 import datetime
 import operator
 import random
-import gues_number_game
+import guess_number_game
 import add_numbers_game
 import remember_number_game
 import hotcoldgame
@@ -588,12 +588,12 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy, boa
         if you_win:
             next_level = True
 
-    if level == 2 and board[y_player][x_player] == '⇵':
+    elif level == 2 and board[y_player][x_player] == '⇵':
         won = add_numbers_game.main()
         if won:
             next_level = True
 
-    if level == 3 and board[y_player][x_player] == '⇵':
+    elif level == 3 and board[y_player][x_player] == '⇵':
         win = remember_number_game.main()
         if win:
             next_level = True
@@ -937,7 +937,7 @@ def print_additional_game_info(inventory):
 
 
 def main():
-    intro()
+    # intro()
     character_name, character_color = create_player()
     level = 0
     # sets parameters of next game level

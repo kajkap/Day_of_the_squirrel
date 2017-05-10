@@ -5,7 +5,7 @@ X                                                                XXXXXXX        
 X                                                               XMMMMMMNX         XX                                   X
 X                                                            XXXMMMMMMMMhXX      XmMX                                  X Inventory:
 X                                                          XXXMMMMMMMMMMMMNXX   XmMMMX                                 X .
-X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X Total treasures :
+X                                                          XMMMMMMMMMMMMMMMMMX XmMMMMMX                    XXXXXX      X Total treasures :  
 X            XXXXXX                                        XMMMMMMMMMMMMMMMMMXXNMMMMMMMX                    X..X       X
 X             X..X                                        XXMMMMMMMMMMMMMMMMy/NMMMMMMMMMX                XXXXXXXXXX    X
 X          XXXXXXXXXX                                   XXXNMMMMMMMMMMMMMMMs-hMMMMMMMMMMMX                X      X     X Legend:

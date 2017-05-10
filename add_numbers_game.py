@@ -60,6 +60,7 @@ def check_answer(total, guess, your_time):
             print('Wrong answer. Try again')
         else:
             print('Well done!')
+            time.sleep(2)
             won = True
     else:
         print('You\'ve exceeded the time. Try again.')

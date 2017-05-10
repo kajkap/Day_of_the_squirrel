@@ -8,7 +8,8 @@ def initial_print():
 
     os.system('clear')
     print("""
-    *** Remember telephone number! ***
+    *** Remember telephone number!
+    Write it down in the same format (divided into 3-digits blocks)***
     """)
 
 
@@ -57,7 +58,9 @@ def check_answer(number, guess):
         time.sleep(2)
     else:
         print('Well done!')
+        time.sleep(2)
         win = True
+    return win
 
 
 def main():
