@@ -32,8 +32,10 @@ def guessing():
     guess = ''
     while not guess.isdigit():
         guess = input()
-        if guess.isalpha():
+        if not guess.isdigit():
             print("Invalid input. You must guess a number!")
+        if len(guess) not in [1, 2]:
+            print("Invaid input. You must guess a number between 1 and 30.")
     guess = int(guess)
     return guess
 
@@ -66,3 +68,5 @@ def main():
         guess = guessing()
         you_win = guess_check(guess, number)
     return you_win
+
+main()
