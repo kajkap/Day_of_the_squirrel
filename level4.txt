@@ -5,7 +5,7 @@ X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.
 X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’*******’.’.’.*******.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.*******.’.’.’.’.’.’.’X Boss energy: Ⓔ
 X     X.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.|.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’.’|’.’.’.’.’.’.’.’.’X Inventory:
 X     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .
-X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Total treasures :  
+X      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Total treasures : q
 X       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXX       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Legend:
@@ -20,7 +20,7 @@ XXXXXXXXXXXXXXXXXX                                                              
 XXXXXXXXXXXXXXXXXXX                                                                               #####################X ☯ : legendary cookie
 XXXXXXXXXXXXXXXXXXXX                                                                              #   ***         ***  X ☂ : ancient umbrella
 XXXXXXXXXXXXXXXXXXXXX                                                                             #  ** _********** _* X ♫ : magic note
-XXXXXXXXXXXXXXXXXXXXXX                                                                            #     ***********    X
+XXXXXXXXXXXXXXXXXXXXXX                                                                            #     ***********    X ☹ ☃ ♞ ☻ ☬ : friends to feed
 XXXXXXXXXXXXXXXXXXXXXXX                                                                           #    *************   X Controls:
 XXXXXXXXXXXXXXXXXXXXXXXX                                                                          #   ***************  X w : up
 XXXXXXXXXXXXXXXXXXXXXXXXX                                                                         #  ***&&*******&&*** X s : down

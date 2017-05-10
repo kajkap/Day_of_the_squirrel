@@ -584,16 +584,19 @@ def checking_level_end(level, inventory, x_player, y_player, hamster_energy, boa
 
     next_level = False
     if level == 1 and board[y_player][x_player] == '⇵':
+        print_level_title(4)
         you_win = guess_number_game.main()
         if you_win:
             next_level = True
 
     elif level == 2 and board[y_player][x_player] == '⇵':
+        print_level_title(4)
         won = add_numbers_game.main()
         if won:
             next_level = True
 
     elif level == 3 and board[y_player][x_player] == '⇵':
+        print_level_title(4)
         win = remember_number_game.main()
         if win:
             next_level = True
@@ -891,7 +894,7 @@ def print_level_title(number):
 
     os.system('clear')
     print(color[0] + images[number] + reset_color)
-    time.sleep(5)
+    time.sleep(3)
 
 
 def insert_text_into_board(y, x, text, board):
@@ -974,7 +977,7 @@ def main():
     game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(level, inventory)
 
     button_pressed = ''
-    health = 20  # player's initial health points
+    health = 100  # player's initial health points
     lamps_lit = 0
     hamster_energy = 600
     game_won = False
@@ -990,6 +993,9 @@ def main():
         button_pressed = getch()    # reads button pressed by user
         if button_pressed == 'i':
             print_additional_game_info(inventory)
+        if button_pressed == ',':
+            x_player = 114
+            y_player = 37
         # changes user position based on pressed button
         x_player, y_player = user_control(board, x_player, y_player, button_pressed, inventory)
         # lights magic lamps in contact with user
@@ -1011,10 +1017,10 @@ def main():
         next_level = checking_level_end(level, inventory, x_player, y_player, hamster_energy, board)
         if next_level:
             # sets parameters of next game level
-            if level in [1, 2, 3, 4]:
-                print_level_title(level)
             game_won, level, inventory, board, x_player, y_player, minions_location = setting_next_level(
                 level, inventory)
+            if level in [1, 2, 3, 4]:
+                print_level_title(level - 1)
 
     print_end_image(game_won)
     menage_highscores(game_won, health, your_time, character_name)
