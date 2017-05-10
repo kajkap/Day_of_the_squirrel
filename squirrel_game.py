@@ -895,18 +895,40 @@ def print_level_title(number):
 
 
 def insert_text_into_board(y, x, text, board):
+    """Function inserts text on the board in the specific location.
+
+    Args:
+        y (int): vertical coordinate of the place on the board where text will be inserted
+        x (int): horizontal coordinate of the place on the board where text will be inserted
+        text (str): text to insert on the board
+        board (list): list of board rows (list)
+
+    Return:
+        board (list): list of board rows (list)
+    """
+
     for i in range(len(text)):
         board[y][x+i] = text[i]
     return board
 
 
 def prepare_board_to_print(inventory, board):
+    """Function creates board and inserts additional info on it.
+
+    Args:
+        inventory (dict): collected items(keys) and their amounts (values)
+        board (list): list of board rows (list)
+
+    Return:
+        board (list): list of board rows (list)
+    """
+
     inventory_info = {
         '●': ('nut', 'food', 0.1), '☯': ('legendary cookie', 'treasure', 0.5),
         '☂': ('ancient umbrella', 'treasure', 0.5), '♫': ('magic note', 'treasure', 0.5),
         '℥': ('key shard', 'tool', 0.25)}
 
-    board = insert_text_into_board(3, 3, 'Kasie Perkowska and Maciej Nowak present:', board)
+    board = insert_text_into_board(3, 3, 'Kasia Perkowska and Maciej Nowak present:', board)
     board = insert_text_into_board(4, 3, 'The Day Of The Squirrel', board)
 
     table_title = ('Item'.rjust(4) + 'Name'.rjust(22) + 'Type'.rjust(10)
@@ -929,6 +951,13 @@ def prepare_board_to_print(inventory, board):
 
 
 def print_additional_game_info(inventory):
+    """Function creates and prints screen with additional game info.
+
+    Args:
+        inventory (dict): collected items(keys) and their amounts (values)
+
+    """
+
     info_table = create_board(120, 40)
     os.system('clear')
     info_table = prepare_board_to_print(inventory, info_table)
