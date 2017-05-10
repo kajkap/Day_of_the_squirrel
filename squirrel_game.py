@@ -966,7 +966,7 @@ def print_additional_game_info(inventory):
 
 
 def main():
-    # intro()
+    intro()
     character_name, character_color = create_player()
     level = 0
     # sets parameters of next game level
