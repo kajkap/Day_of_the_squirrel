@@ -827,7 +827,7 @@ def print_highscores(highscores):
         print(' | '.join(item))
 
 
-def menage_highscores(game_won, health, your_time, character_name):
+def manage_highscores(game_won, health, your_time, character_name):
     """Function calls other high scores functions depending on the user's win or loss.
 
     Args:
@@ -1023,7 +1023,7 @@ def main():
                 print_level_title(level - 1)
 
     print_end_image(game_won)
-    menage_highscores(game_won, health, your_time, character_name)
+    manage_highscores(game_won, health, your_time, character_name)
 
 
 if __name__ == '__main__':
