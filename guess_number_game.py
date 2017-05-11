@@ -68,5 +68,3 @@ def main():
         guess = guessing()
         you_win = guess_check(guess, number)
     return you_win
-
-main()
