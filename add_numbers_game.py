@@ -82,3 +82,7 @@ def main():
             your_time = int(end_guess - start_guess)
             won = check_answer(total, guess, your_time)
     return won
+
+
+if __name__ == '__main__':
+    main()
