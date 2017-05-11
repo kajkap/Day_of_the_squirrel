@@ -68,10 +68,7 @@ def main():
         guess = guessing()
         you_win = guess_check(guess, number)
     return you_win
-<<<<<<< HEAD
-=======
 
 
 if __name__ == '__main__':
     main()
->>>>>>> 26d76aa1a35fdaac5616cfde2ac01aac78d1b260
