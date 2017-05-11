@@ -74,3 +74,7 @@ def main():
         guess = guessing()
         win = check_answer(number, guess)
     return win
+
+
+if __name__ == '__main__':
+    main()

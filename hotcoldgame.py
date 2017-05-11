@@ -47,6 +47,8 @@ def input_guess():
     guess = ''
     while len(guess) != 3 or not guess.isdigit():
         guess = input()
+        if not guess.isdigit() or len(guess) != 3:
+            print('Try again! You should provide only 3-digit number!')
     return guess
 
 
@@ -77,9 +79,7 @@ def initial_print():
     When I say:    That means:
 
       Cold       No digit is correct.
-
       Warm       One digit is correct but in the wrong position.
-
       Hot        One digit is correct and in the right position.
 
     I have thought up a number. You have 10 guesses to get it.
@@ -131,3 +131,7 @@ def main():
     hot_amount = guessing_loop(hot_amount, turn, number)
     win = final_print(hot_amount)
     return win
+
+
+if __name__ == '__main__':
+    main()
